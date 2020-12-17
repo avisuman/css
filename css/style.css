@@ -1,0 +1,1101 @@
+/* Declare variable */
+:root{
+    --primary-color: teal;
+    --btn-color: tomato;
+    --txt-color: white;
+}
+/* Downloaded font declaration */
+@font-face {
+    font-family: avi_custom;
+    src: url('/fonts/Montana.ttf');
+}
+
+/* 00:23:06 section-4 CSS Selectors */
+.element-selector {
+    color: goldenrod;
+}
+.id-selector {
+    color: red;
+}
+.class-selector {
+    color: seagreen;
+}
+.class1-selector {
+    color: slateblue;
+    font-size: 18px;
+    font-weight: 600;
+}
+#p1 {
+    font-size: 40px;
+}
+#clss1-slt {
+    font-size: 45px;
+}
+
+.clss-selt {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.code-bg-color {
+    background-color: rgb(234, 238, 237);
+    font-size: 16px;
+}
+
+/* 00:56:09 section-7 CSS Backgrounds */
+
+#rgb-black {
+    font-weight: 550;
+}
+
+#rgb-white {
+    font-weight: 550;
+}
+
+#rgb-red   {
+    font-weight: 550;
+    color: rgb(255, 0, 0);
+}
+
+#rgb-green {
+    font-weight: 550;
+    color: rgb(0, 255, 0);
+
+}
+
+#rgb-blue  {
+    font-weight: 550;
+    color: rgb(0, 0, 255);
+}
+
+#rgba-red {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+#hex-red {
+    color: #ff0000;
+    font-weight: 550;
+}
+
+#hsl-red {
+    color: hsl(30, 100%, 50%);
+}
+
+#hsla-color {
+    color: hsla(0, 50%, 30%, 0.7);
+}
+
+/* 00:56:09 section-7 CSS Backgrounds */
+
+#div-bg-color {
+    background-color: hsl(30, 100%, 50%);
+    
+}
+
+#div-bg-color>p {
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+#div-bg-image {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* background: #00ff00 url('/images/banner.jpg') no-repeat fixed center; */
+    
+}
+#div-bg-image>p {
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+#div-multiple-bg-image-method1 {
+    width: 100%;
+    height: 582px;
+    background-color: darkorange;
+    background-image: url('/images/milk-transparent_resized.png');
+    /* background-repeat: no-repeat; */
+    /* background-size: 1200px 450px; */
+}
+
+#div-multiple-bg-image-method2 {
+    width: 100%;
+    height: 550px;
+    background-image: url('/images/girl_1_crpd.jpg'), url('/images/hotspot.jpg'), url('/images/girl_only.jpg');
+    background-repeat: no-repeat;
+    background-position: left top, right top, right bottom;
+}
+
+/* 01:20:33 section-8 CSS Borders */
+
+#border-example {
+    border: 1px solid red;
+    border-radius: 10px;
+}
+#hw-parent {
+    height: 500px;
+    /* width: 70%; */
+    background-color: tomato;
+}
+
+#hw-child {
+    height: 300px;
+    width: 50%;
+    background-color: violet;
+    max-width: 200px;
+    max-height: 400px;
+}
+
+#hw-child-of-body {
+    width: 70%;
+    height: 500px;
+    background-color: rgb(236, 250, 114);
+}
+
+/* 01:41:36 section-10 CSS Padding */
+
+#padd-div {
+    border: 1px solid red;
+    padding: 30px;
+}
+
+/* 01:45:06 section-11 CSS Margins */
+
+#margin-parent {
+    border: 5px dotted black;
+}
+
+.margin-cl-div {
+    border: 1px solid green;
+    padding: 25px 35px;
+}
+
+#margin-div {
+    /* margin: 20px 40px; */
+    width: 300px;
+    margin: auto;
+}
+
+/* 01:55:08 section-12 CSS Box Model */
+
+/* 01:58:00 section-13 CSS Text */
+
+#div-text {
+    width: 700px;
+    height: 200px;
+    border: 1px solid purple;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    /* text-align: justify; */
+    /* text-transform: uppercase; */
+    /* line-height: 30px; */
+    /* text-indent: 50px; */
+    /* letter-spacing: 4px; */
+    /* word-spacing: 15px; */
+    /* white-space: nowrap; */
+    word-wrap: break-word;
+}
+
+#shadow-text {
+    font-size: 70px;
+    text-shadow: 2px -10px 7px purple ;
+}
+
+#vertical-div{
+    width: 500px;
+    border: 1px solid black;
+}
+
+#vertical-text {
+    font-size: 40px;
+    /* background-color: rebeccapurple; */
+    /* color: white; */
+    writing-mode: vertical-lr;
+}
+
+/* 02:18:21 section-14 CSS Links */
+
+#css-link {
+    border: 1px solid black;
+    height: 100px;
+}
+
+#link-tag-example {
+    font-size: 50px;
+    text-decoration: none;
+}
+
+#link-tag-example:link {
+    color: chartreuse;
+}
+
+#link-tag-example:visited {
+    color: black;
+}
+
+#link-tag-example:hover {
+    color: darkgoldenrod;
+}
+
+#link-tag-example:active {
+    color: red;
+}
+
+/* 02:24:25 section-15 CSS Fonts */
+
+.online-fonts {
+    font-family: 'Poppins', sans-serif;
+}
+
+#Poppins-font {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#Texturina-font {
+    font-size: 20px;
+    font-family: 'Texturina', serif;
+}
+
+.download-font {
+    font-family: avi_custom;
+    font-size: 20px;
+    color: royalblue;
+}
+
+/* 02:51:37 section-16 CSS Units */
+
+#absolute-parent {
+    border: 4px solid green;
+    /* width: 10cm; */
+    /* width: 200mm; */
+    /* width: 6inch; */
+    /* width: 100pt; */
+    width: 80pc;
+}
+
+#relative-parent {
+    border: 2px solid red;
+    /* width: 800px; */
+    height: 50vh;
+    width: 50vw;
+
+}
+
+#relative-child {
+    border: 2px solid blueviolet;
+    width: 50%;
+}
+
+/* html {
+    font-size: 18px;
+} */
+
+#relative-parent-fonts {
+    border: 2px solid yellow;
+    font-size: 30px;
+}
+#relative-child-fonts {
+    font-size: 2rem;
+}
+
+/* 03:10:26 section-17 CSS Cursor */
+
+#css-cursor {
+    border: 1px solid orangered;
+    cursor: crosshair;
+}
+
+/* 03:15:24 section-18 CSS !important */
+
+/* 03:18:43 section-19 CSS Box Shadow */
+
+#box-1 {
+    border: 2px solid blue;
+}
+
+#box-2 {
+    border: 1px solid green;
+    background-color: greenyellow;
+    margin: 100px;
+    padding: 20px;
+    width: 500px;
+    box-shadow: -10px -20px 10px orangered, 10px 20px 10px yellow;
+}
+
+/* 03:24:06 section-20 CSS Opacity */
+
+#color-box {
+    background-color: greenyellow;
+    height: 500px;
+    width: 500px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+#css-opacity {
+    opacity: 0.2;
+}
+
+/* 03:30:30 section-21 CSS Filter */
+
+#css-filter {
+    filter: grayscale(100%);
+    filter: hue-rotate(90deg);
+    filter: invert(70%);
+    filter: opacity(50%);
+    filter: saturate(50%);
+    filter: sepia(90%);
+
+}
+
+/* This is not working */
+/* #css-filter {
+    filter: grayscale(100%), opacity(50%);
+} */
+
+/* 03:35:51 section-22 CSS Image Sprites */
+
+#sprite {
+    height: 250px;
+    width: 250px;
+    background-image: url('/images/css_sprites.png');
+    background-repeat: no-repeat;
+    background-position: -270px -10px;
+}
+
+/* section-23 CSS Gradients */
+
+#linear-gradient-1 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(#00ff00, #0000ff);
+}
+
+#linear-gradient-2 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(to right,#00ff00, #0000ff, #ff0000);
+}
+
+#linear-gradient-3 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(to bottom right,#00ff00, #0000ff, #ff0000);
+}
+#linear-gradient-4 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(-160deg ,#00ff00, #0000ff, #ff0000);
+}
+
+#radial-gradient-1 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: radial-gradient(#fbff00, #ff0000);
+}
+#radial-gradient-2 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: radial-gradient(circle, #fbff00 30%, #ff0000 20%, #0000ff 10%, #00ff00 5%);
+}
+
+/* 03:50:44 section-24 CSS Overflow */
+
+#overflow {
+    width: 500px; 
+    height: 300px;
+    background-color: whitesmoke;
+    border: 1px solid tomato;
+    overflow: auto;
+    resize: both;
+}
+
+/* 03:57:50 section-25 CSS Resizable */
+
+textarea {
+    resize: none;
+}
+
+/* 04:01:35 section-26 CSS Lists */
+
+#css-ul-list {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(/images/right-arrow-50x50.png);
+}
+
+#css-ol-list {
+    list-style-type: upper-alpha;
+}
+
+/* 04:09:24 section-27 CSS Tables  */
+
+#table-styling {
+    border: 1px solid purple;
+    border-collapse: separate;
+    empty-cells: hide;
+}
+
+#table-caption {
+    border: 1px solid purple;
+}
+
+th {
+    border: 1px solid purple;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+td {
+    border: 1px solid purple;
+    height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+/* 04:24:51 section-28 CSS Functions */
+
+#css-function {
+    background-color: var(--primary-color);
+    height: 200px;
+    width: calc(100% - 200px);
+}
+
+#anchor-fun-exmp {
+    padding: 10px 30px;
+    background-color: var(--btn-color);
+    margin: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* 04:35:52 section-29 CSS Box Sizing */
+
+#without-box-sizing {
+    width: 50%;
+    height: 150px;
+    background-color: yellowgreen;
+}
+
+#with-box-sizing {
+    width: 50%;
+    height: 150px;
+    background-color: turquoise;
+    padding: 50px;
+    border: 10px solid black;
+    box-sizing: border-box;
+}
+
+/* 04:41:32 section-30 CSS initial vs inherit */
+
+#green {
+    color: green;
+    font-size: 50px;
+}
+#red {
+    color: red;
+}
+#initial {
+    color: initial;
+}
+#inherit {
+    color: inherit;
+}
+
+/* 04:46:33 section-31 CSS The object-fit Property */
+
+#object-fit-image {
+    border: 1px solid red;
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+    background-position: top right;
+}
+
+
+/* 04:50:45 section-32 CSS Pseudo-classes */
+
+#pseudo-exmp-2>li:first-child {
+    color: rgba(255, 0, 0, 0.5);
+    font-size: 30px;
+}
+
+#pseudo-exmp-2>li:last-child {
+    color: chartreuse;
+    font-size: 30px;
+}
+
+#pseudo-exmp-3>li:nth-child(even) {
+    color: chartreuse;
+    font-size: 30px;
+    background-color: gainsboro;
+}
+
+#pseudo-exmp-3>li:nth-child(odd) {
+    color:  rgba(255, 0, 0, 0.5);
+    font-size: 30px;
+    background-color: ghostwhite;
+}
+
+#pseudo-exmp-4>li:nth-child(3n + 1) {
+    color:  rgba(255, 0, 0, 0.5);
+    font-size: 30px;
+    background-color: ghostwhite;
+}
+
+#input-focus:focus {
+    border: 3px solid fuchsia;
+}
+
+/* 04:59:10 section-33 CSS Pseudo-elements */
+
+#Pseudo-element>p::first-letter {
+    font-size: 30px;
+    color: fuchsia;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+#Pseudo-element>p::first-line {
+    font-size: 20px;
+    color: chocolate;
+}
+
+#ins-element-thr-css>h1::before {
+    content: url(/images/right-arrow-50x50.png);
+}
+#ins-element-thr-css>h1::after {
+    content: url(/images/right-arrow-50x50.png);
+}
+#ins-element-thr-css>h1::after {
+    content: " added after";
+}
+
+::selection {
+    background-color: yellowgreen;
+    color: red;
+}
+
+/* Very Important Topics in CSS starts from here */
+
+/* 05:04:59 section-34 CSS Display and visibility  */
+
+/* 05:18:38 section-35 CSS Position */
+
+
+/* relative */
+#parent-1 {
+    border: 1px solid red;
+    width: 50%;
+    padding: 20px;
+}
+#one-2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+}
+#two-3 {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+}
+#three-4 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+}
+
+/* absolute */
+#parent-2 {
+    border: 1px solid red;
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    margin: 100px;
+}
+#one-5 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+}
+#two-6 {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#three-7 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+}
+
+/* Fixed */
+
+#parent-3 {
+    border: 1px solid red;
+    width: 50%;
+    padding: 20px;
+}
+#one-8 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+}
+#two-9 {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-color: red;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+#three-10 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+}
+
+/* 05:37:50 section-36 CSS Layers and z-index */
+
+#parentt {
+    width: 50%;
+    height: 250px;
+    padding: 20px;
+}
+#onee {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    z-index: 8;
+
+}
+#twoo {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: -50px; 
+    z-index: 90;
+}
+#threee {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -100px;
+    z-index: 30;
+}
+
+/* 05:43:17 section-37 CSS Float and Clear */
+
+#float-parent>img {
+    width: 100px;
+    height: auto;
+    padding: 10px;
+}
+
+#float-img-1 {
+    float: left;
+}
+
+#float-img-2 {
+    float: right;
+}
+
+#float-nav-container {
+    background-color: blue;
+    overflow: auto;
+}
+
+#float-nav-holder {
+
+}
+
+.float-nav-items {
+    float: left;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    list-style-type: none;
+    text-transform: uppercase;
+    background-color: violet;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    border-radius: 100px;
+}
+
+/* clear */
+#nav-container {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: 1px solid tomato;
+    height: 80px;
+}
+
+#header-conatiner {
+    background-color: rgb(0, 255, 242);
+    height: 80px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+#sidebar-conatiner {
+    background-color: rgb(0, 255, 85);
+    height: 70px;
+    width: 30%;
+    float: right;
+}
+
+#footer-container {
+    background-color: rgb(234, 0, 255);
+    height: 40px;
+    width: 100%;
+    clear: both;
+}
+
+/* 06:03:26 section-38 CSS 2D Transforms */
+
+.btn-class>a{
+    text-decoration: none;
+    background-color: crimson;
+    padding: 5px 10px;
+    margin: 20px;
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 100px;
+}
+
+#wrapper-2d>a:hover {
+    display: inline-block;
+    transform: rotate(-20deg);
+}
+
+#wrapper-2d-s1:hover{
+    display: inline-block;
+    transform: scale(1.5, 1.5);
+}
+
+#fb {
+    background-color: rgb(0, 0, 255);
+}
+
+#wrapper-2d-s2>a {
+    display: inline-block;
+    background-color: violet;
+    transform: skew(10deg, 20deg);
+}
+
+#wrapper-2d-s3>a {
+    display: inline-block;
+    background-color: turquoise;
+    transform-origin: 0% 100%;
+    transform: rotate(20deg);
+}
+
+/* 06:16:28 section-39 CSS 3D Transforms */
+
+#cover {
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    margin: 150px;
+}
+
+#content {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    transform: perspective(300px) rotate3d(10, 20, 50, 20deg);
+}
+
+/* 06:25:21 section-40 CSS Transitions */
+
+#css-transition {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin: 100px;
+    transition-property: width, height, background-color;
+    transition-duration: 2s;
+}
+
+#css-transition:hover {
+    width: 500px;
+    height: 200px;
+    background-color: yellow;
+}
+
+/* 06:34:32 section-41 CSS Animations */
+
+@keyframes changecolor {
+    from { background-color: red;}
+    25% { background-color: yellowgreen; width: 400px;}
+    50% { background-color: turquoise;}
+    75% { background-color: orangered; width: 200px;}
+    to { background-color: yellow;}
+}
+
+#animate {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    margin: 50px;
+    animation-name: changecolor;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate_2 {
+    from { background-color: red;border-radius: 0%;}
+    25% { background-color: yellowgreen; border-radius: 25%;}
+    50% { background-color: turquoise; border-radius: 50%;}
+    75% { background-color: orangered; border-radius: 25%;}
+    to { background-color: yellow; border-radius: 0%;} 
+}
+
+#animate-2 {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    margin: 50px;
+    animation-name: animate_2;
+    animation-duration: 5s;
+    /* animation-delay: 2s; */
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* 06:52:56 section-42 Print Style in CSS */
+
+@media screen {
+    #print-media>p {
+        font-size: 20px;
+    }
+}
+
+@media print {
+    #print-media>p {
+        font-size: 30px;
+        color: orangered;
+    }
+
+    #print-media>img {
+        display: none;
+    }
+}
+
+/* 06:57:29 section-43 Responsive Web Design */
+
+/* 07:06:26 section-44 Viewport meta tag */
+
+#parent-header{
+    /* border: 1px solid red; */
+    overflow: auto;
+}
+
+#res-menu-header {
+    width: 70%;
+    background-color: chartreuse;
+    float: left;
+}
+
+#res-logo-header {
+    width: 30%;
+    background-color: chocolate;
+    float: left;
+}
+
+.increase-size {
+    font-size: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    #res-menu-header {
+        width: 50%;
+    }
+
+    #res-logo-header{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 400px) {
+    #res-menu-header {
+        width: 100%;
+    }
+
+    #res-logo-header{
+        width: 100%;
+    }
+}
+
+/* 07:28:01 section-46 CSS Advance Selector */
+
+#advance-selector a[href="https://www.google.com"] {
+    font-size: 25px;
+    color: rgb(234, 0, 255);
+    text-decoration: none;
+}
+
+#advance-selector>h1 {
+    color: orangered;
+}
+
+#advance-selector>h1 + p {
+    color: peru;
+}
+
+#advance-selector>h1 ~ ul {
+    color: green;
+}
+
+#advance-selector , #adv-2 {
+    color: indigo;
+}
+
+/* 07:46:36 section-47 CSS Specificity */
+
+/* 07:52:41 section-48 CSS Multiple Columns */
+
+#multiple-columns {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-color: lightseagreen;
+    column-rule-width: 5px;
+}
+
+#multiple-columns>h1 {
+    column-span: all;
+    color: maroon;
+}
+
+/* 07:58:28 section-49 CSS Flexbox */
+
+.flex-container {
+    background-color: indianred;
+    display: flex;
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: nowrap; */
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+    /* height: 300px; */
+    align-items: center;
+}
+
+.flex-child {
+    background-color: wheat;
+    margin: 20px;
+    padding: 20px;
+    width: 100px;
+    flex-grow: 1;
+}
+
+/* 08:28:14 section-50 CSS Grid */
+
+.grid-container {
+    background-color: indianred;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 50% 100px;
+    grid-template-rows: 100px 200px auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+    justify-content: end;
+}
+
+.grid-items {
+    background-color: wheat;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+/* 
+#grid-5 {
+    grid-area: 1/2/3/4;
+} */
+
+/* #grid-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#grid-8 {
+    grid-column: 2/4;
+}
+
+#grid-4 {
+    grid-row: 2/4;
+} */
+
+/* grid table */
+
+.grid-container-2 {
+    background-color: greenyellow;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer';
+}
+
+
+.grid-item-2 {
+    background-color: palevioletred;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    /* width: 100px; */
+}
+
+/* name all grid */
+
+/* #grid-11 {
+    grid-area: header;
+}
+#grid-12 {
+    grid-area: menu;
+} */
+
+
+/* 09:03:18 section-51 CSS - Validations */

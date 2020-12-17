@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- External css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Internal css -->
+    <style>
+        .code1{
+            color: blue;
+        }
+    </style>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Texturina:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 00:09:34 section-3 How To Add CSS in HTML -->
+    <hr>
+   <div>
+       <h2>How To Add CSS in HTML</h2> 
+    <hr>
+       <h3>There are three way to add css</h3>
+       <ol>
+           <li>External</li>
+           <xmp class=" code1 code-bg-color">
+        <head>
+            <link rel="stylesheet" href="./css/style.css">
+        </head>
+           </xmp>
+           <li>Internal</li>
+           <xmp class="code1 code-bg-color">
+        <head>
+            <style>
+                #code1{
+                    color: blue;
+                }
+            </style>
+        </head>
+           </xmp>
+           <li>Inline</li>
+           <xmp style="color: crimson" class="code-bg-color">
+        <p style="color: crimson">This we will write in inside tag itself.</p>
+           </xmp>
+        <p>NOTE: <b>Inline css</b>  get most priority unless and until !important is written for the same selector somewhere else.</p>
+        <p>NOTE: <b>Internal CSS</b> & <b>External CSS</b> priority is depends on sequence i.e whichever will be written at last will be applied.</p>
+       </ol>
+   </div>
+   <hr>
+   <!-- 00:23:06 section-4 CSS Selectors -->
+   <div>
+       <hr>
+       <h2>CSS Selectors</h2> <hr>
+       <h3>For styling you have to select element and that is called selector.</h3>
+       <h4>There are mainly three type of selectors:-</h4>
+       <ol>
+           <li>Element Selector</li>
+           <xmp class="element-selector code-bg-color">
+                p{
+                    color: goldenrod;
+                }
+           </xmp>
+           <li>ID Selector</li>
+           <p>Id is unique and can be used only one time per id.</p>
+           <xmp class="id-selector code-bg-color">
+                #id-selector {
+                    color: red;
+                }
+           </xmp>
+           <li>Class Selector</li>
+           <p>There can be several class and can be used multiple times.</p>
+           <xmp class="class-selector code-bg-color">
+                .class-selector {
+                    color: seagreen;
+                }
+           </xmp>
+       </ol>
+       <h3>Output</h3>
+       <p id="p1" class="element-selector">Paragraph 1</p>
+       <p class="id-selector">Paragraph 2</p>
+       <p class="class-selector">Paragraph 3</p>
+       <p id="clss1-slt" class="class1-selector clss-selt">Paragraph 4</p>
+       <p class="class1-selector">Paragraph 5</p>
+       <h4>Notes</h4>
+       <ol>
+           <li>
+               <p>You can also use <b>id</b> and <b>class</b> together</p>
+               <xmp class="code-bg-color">
+        <p id="p1" class="element-selector">Paragraph 1</p> 
+               </xmp>
+           </li>
+           <li>
+               <p>You can also use multiple classes for same element. Just give space and declare another class.</p>
+               <h4>HTML</h4>
+               <xmp class="code-bg-color">
+        <p id="clss1-slt" class="class1-selector clss-selt">Paragraph 4</p>
+               </xmp>
+                   <h4>CSS</h4>
+                <xmp class="code-bg-color">
+        #clss1-slt {
+        font-size: 45px;
+        }
+        
+        .clss-selt {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+
+               </xmp>
+           </li>
+       </ol>
+   </div>
+   <hr>
+   <!-- 00:46:44 section-6 CSS Colors -->
+   <div>
+        <hr>
+        <h2>CSS Colors</h2>
+        <hr>
+        <p>In css color can be specified using</p>
+        <ul>
+            <li>Predefined Color Name</li>
+            <p>Modern browser support 140 named colors</p>
+            <li>RGB</li>
+            <ul>
+                <li>rgb(red, green, blue)</li>
+                <li>Color value between 0 to 255</li>
+                <li id="rgb-black">Black : rgb(0, 0, 0)</li>
+                <li id="rgb-white">White : rgb(255, 255, 255)</li>
+                <li id="rgb-red">Red : rgb(255, 0, 0)</li>
+                <li id="rgb-green">Green : rgb(0, 255, 0)</li>
+                <li id="rgb-blue">blue : rgb(0, 0, 255)</li>
+            </ul>
+            <li>RGBA</li>
+            <ul>
+                <li>rgba(red, green, blue, <b>alpha</b>)</li>
+                <li>alpha parameter is a number between 0.0 <b>(fully transparent)</b> and 1.0 <b>(not fully transparent at all)</b></li>
+                <li id="rgba-red"><b>RGBA(255, 99, 71, 0.3)</b></li>
+            </ul>
+            <li>HEX</li>
+                <ul>
+                    <li><b>#rrggbb</b></li>
+                    <li>rr (Red), gg (Green), bb (Black)</li>
+                    <li>Hexadecimal values between 00 and ff (same as decimal 0-255)</li>
+                    <li id="hex-red">Red: <b>#ff0000</b></li>
+                    <li>Black: <b>#000000</b></li>
+                    <li>White: <b>#ffffff</b></li>
+                </ul>
+            <li>HSL</li>
+            <ul>
+                <li> <b>hsl(hue, saturation, lightness)</b> </li>
+                <li>hue, saturation and lightness (HSL)</li>
+                <li>Hue is the degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.</li>
+                <li>saturation is percentage value, 0% means shade of gray, and 100% is the full color.</li>
+                <li>lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white.</li>
+                <li id="hsl-red"><b>Light Orange: HSL(0, 100%, 50%)</b></li>
+            </ul>
+            <li>HSLA</li>    
+            <ul>
+                <li><b>hsla(hue, saturation, lightness, alpha)</b></li>
+                <li>alpha parameter is a number between 0.0 <b>(fully transparent)</b> and 1.0 <b>(not fully transparent at all)</b></li>
+                <li id="hsla-color"><b>HSLA(0, 100%, 50%, 0.3)</b></li>
+            </ul>
+        </ul>
+    </div>
+   <hr>
+    <!-- 00:56:09 section-7 CSS Backgrounds -->
+   <div >
+       <hr>
+       <h2>CSS Backgrounds</h2>
+       <hr>
+       <div id="div-bg-color">
+           <p>Background color changed</p>
+       </div>
+       <ul>
+           <li>If your container size is big and your image is small, than your image will repeat itself to fill the container.
+               You can use property called <b>background-repeat: no-repeat;</b> </li> <br>
+           <li>You can also position your image along <b>X</b> and <b>Y</b> axis. Use <b>background-position: bottom center;</b></li>
+           <li>
+               <p>You can also set background sizes along <b>X</b> and <b>Y</b> axis.i.e <b>background-size: 500px 500px;</b></p>
+               <p>You can also give size in percentages, but when you do so then percentage will be calculated according to your container's height and width. <b>background-size: 50% 50%;</b></p>
+               <ul>
+                   <li>Contain</li>
+                   <ul>
+                       <li>This do not cut your image.</li>
+                       <li>This don't distort your image.</li>
+                       <li>This might not fill your container.</li>
+                       <li>You have to maintain the ratio of containing div.</li>
+                   </ul>
+                   <li>Cover</li>
+                   <ul>
+                       <li>It automatically adjust size to <b>100x100</b></li>
+                       <li>Due to automatic adjustment it cuts image automatically to fill background. </li>
+                       <li>This vary from browser to browser how it will be displayed.</li>
+                       <li>This generally used in patterns.</li>
+                   </ul>
+               </ul>
+           </li>
+           <li>Background is still and content in moving, to achieve this you should use this property i.e <b>background-attachment: fixed;</b></li>
+           <br>
+           <li>
+               Note:
+               <ul>
+                   <li></b> When you give size <b>(100% by 100%)</b> then this disturb your ratio, your image may look stretched.</li>
+                   <li><b>Cover</b> don't stretch your image but while trying to fill the container it <b>cuts image</b>. Use with patterns.</li>
+                   <li>Use <b>contain</b> when your size and ratio of div and image are same. <b>ratio</b> plays very vital role when you use contain. Ratio of div and image should be same.</li>
+               </ul>
+            </li>
+            <br>
+           <li>You can use all background property at once. Here is the sorthand: 
+               <ul>
+                   <li><b>background: background-color background-image background-repeat background-attachment background-position ;</b></li>
+                   Example: background: #00ff00 url('/images/banner.jpg') no-repeat fixed center;
+               </ul>
+           </li>
+           <br>
+       </ul>
+       <div id="div-bg-image">
+        <p>Hey i am your background image</p>
+       </div>
+
+       <ul>
+           <li>Multiple Background</li>
+           Method 1:
+       </ul> 
+       
+       <div id="div-multiple-bg-image-method1"></div>
+       <ul>
+           Method 2:
+           <li>In this we are going to use multiple images as background by using <b>background-position</b> attribute. We have given position to all images.</li>
+           <li style="list-style-type: none;">
+               <xmp class="code-bg-color">
+    background-image: url('/images/girl_1_crpd.jpg'), url('/images/hotspot.jpg'), url('/images/girl_only.jpg');
+    background-repeat: no-repeat;
+    background-position: left top, right top, right bottom;
+               </xmp>
+           </li>
+       </ul>
+       <div id="div-multiple-bg-image-method2">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum enim repellendus exercitationem voluptas iusto pariatur omnis architecto quis et atque nostrum unde, labore sapiente dolor voluptatibus blanditiis aspernatur id, suscipit cum rerum expedita veniam alias! Porro quaerat officia culpa tempora voluptas autem laudantium ea corporis dignissimos consequatur, sit perferendis quis quos, saepe libero! Labore distinctio eum omnis nemo at debitis facilis, odio esse aperiam magni velit perspiciatis quos alias earum saepe a maiores sunt voluptatem tempora. Voluptate sunt vel laudantium consequuntur possimus nobis natus magni quasi, deserunt blanditiis cupiditate enim laboriosam rem consequatur tenetur dolorem accusamus consectetur id? Qui vitae illum minima optio, distinctio cupiditate sint explicabo blanditiis doloribus et possimus itaque enim eveniet vel, totam corrupti voluptatibus excepturi nobis natus repudiandae similique? Cumque voluptatem atque numquam ut voluptatibus, asperiores vitae modi illo deleniti earum fugit molestias facere eos quaerat dicta! Veritatis iure in, quo temporibus exercitationem debitis ipsam corrupti, nulla facilis quis ipsa deserunt necessitatibus? Ut nam accusamus voluptates cumque non officiis odio amet! In, aliquid, tempora quod officiis voluptate dicta tempore adipisci doloribus ab minus est facere repudiandae, animi quas necessitatibus laudantium numquam eveniet unde! Error saepe placeat expedita eius doloremque laboriosam eveniet magni nihil ducimus accusamus impedit, quia totam, animi deserunt amet. Quod, perferendis nam, tenetur alias amet quasi mollitia expedita veniam officiis esse ipsum similique sunt eveniet dolores quae porro commodi iure! Saepe, reprehenderit hic maxime asperiores odit quam delectus voluptatum dolor unde debitis. Ipsam culpa nesciunt assumenda possimus eius. Voluptatem, nobis! Rerum sapiente assumenda accusantium ipsum quasi ad, est explicabo! Quod voluptatem dolorum provident est autem dolorem, odio incidunt perferendis laudantium, porro quisquam exercitationem, id veritatis nulla cum eligendi officia? Harum quo assumenda minima debitis aliquid tempora cumque dolores quasi libero, mollitia dignissimos similique voluptatem inventore et ut vel voluptates officiis iusto? Unde qui sapiente tenetur, quas rem praesentium dolorem voluptatum voluptas facere, odit repellat optio perspiciatis maiores quidem. Facere minus architecto perspiciatis cumque, blanditiis praesentium ab sapiente, porro libero dolorem reprehenderit neque expedita odit omnis? Natus, autem sit. Obcaecati, soluta. Blanditiis natus, perspiciatis libero sed molestiae illo at est harum ut totam repellendus doloribus, eius doloremque eaque odit ad quia non ex adipisci minus iure? Quis enim iusto reprehenderit quam placeat illo corrupti velit, eaque totam molestiae et. Quo inventore, dolore perspiciatis, nisi deleniti nihil esse sunt, expedita molestias praesentium ratione amet enim! Consectetur nulla accusamus a pariatur officiis quam exercitationem repellendus iure dolorum blanditiis quia modi natus numquam aspernatur in fuga, id molestiae harum doloremque! Pariatur obcaecati exercitationem, animi culpa quae praesentium iste excepturi earum, eaque possimus, facere dolorum delectus architecto! Officia sint in molestias, doloremque fuga non voluptates quo, quia placeat ducimus quod enim nesciunt excepturi neque alias libero sed illum? Iste quaerat, odio tempore accusantium blanditiis omnis quisquam enim suscipit id rerum modi perspiciatis vero consequatur quae magnam, recusandae deserunt. Nemo voluptates perspiciatis recusandae asperiores ducimus ut, molestiae numquam excepturi quos sunt, exercitationem nobis consequuntur cum quia at quas adipisci iusto tenetur quam dolore dignissimos nam consequatur amet ipsam. Pariatur porro eum officiis itaque blanditiis vitae necessitatibus soluta voluptates! Repellat reprehenderit facilis quia molestiae ad minus sit vitae veritatis iusto, mollitia recusandae rem esse sed modi ipsa maiores quidem tenetur consequatur ducimus libero fugiat. Quaerat asperiores sed alias ipsum molestias nisi, ullam, necessitatibus illum possimus aperiam obcaecati minus quo! Placeat ratione a ad porro, repellat quae dolores harum dolorem illo eum nostrum maxime reprehenderit eius assumenda praesentium asperiores magnam nam! Numquam sapiente laborum perferendis nihil reprehenderit vero culpa deleniti error, qui temporibus libero nulla repudiandae consequuntur dolorem delectus, nesciunt placeat aut fugit aliquam consectetur vitae ratione ipsum! Amet harum autem recusandae odit ipsum sed iure eveniet ab est praesentium dolore vel, obcaecati qui cum laborum, possimus magnam ad numquam, nulla maiores sunt. Architecto laudantium nihil maiores ipsum. Facilis, voluptate laboriosam! Praesentium iste, laudantium officia cum odio quibusdam minus dignissimos, expedita voluptatum ratione porro, libero nulla provident numquam corrupti soluta sunt nisi itaque deleniti veritatis corporis. Culpa quibusdam dolorem aut delectus voluptatum debitis aliquid labore mollitia. Repudiandae, magni, ipsum optio accusantium voluptatem architecto maiores in autem nostrum voluptatum ad sapiente sequi quisquam suscipit quam adipisci tempora corrupti at cum excepturi corporis iste aut saepe. Mollitia quidem soluta excepturi aspernatur odit nisi tempora impedit sint, tenetur provident praesentium quae, nesciunt ea hic, repellat suscipit vitae numquam velit assumenda blanditiis optio. Aliquid earum, sed nostrum ad ipsam sunt. Non quis numquam esse, modi, ea sunt quasi molestias aut nam facere soluta voluptate quidem nulla quam perferendis in aliquid? Labore repellendus velit a molestiae eligendi asperiores culpa, quia illum amet libero, iure voluptatibus odit itaque rem aut non architecto illo ea. Numquam repudiandae quod corrupti hic esse maiores. Porro, fugit! Quasi vero reiciendis, inventore reprehenderit numquam earum suscipit atque modi illo! Earum libero natus voluptatum, inventore mollitia sit id! Architecto veniam quis ducimus nemo provident.
+       </div>
+   </div>
+   <hr>
+   <!-- 01:20:33 section-8 CSS Borders -->
+   <div>
+       <hr>
+       <h2>CSS Borders</h2>
+       <hr>
+       <ul>
+           <li>Border property short hand</li>
+           <xmp class="code-bg-color">
+    border: top right bottom left;
+    border: solid dotted none dotted;
+           </xmp>
+           <xmp class="code-bg-color">
+    #border-example {
+        border: border-width border-style border-color
+        border: 1px solid red;
+    } 
+           </xmp>
+           <li>Body-Radius is directly proportion to width. When we give radius in percentage then it will calculate according to the width of element.</li>
+       </ul>
+       <div id="border-example">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem facere at obcaecati deserunt maiores a quidem ab. Cum accusantium nam, minus quo modi explicabo maxime repellat amet deserunt nesciunt quidem, praesentium eum veritatis molestias quod maiores quisquam iure illo deleniti enim nobis aspernatur ut. Fugiat repellat odit soluta nihil eos laudantium dolorem eaque excepturi sint sapiente dignissimos dolorum aut illum omnis numquam, fugit nemo? Officiis esse perferendis porro expedita repudiandae. Sequi et cum quam magni beatae vitae ea quia deserunt ratione perferendis! Laboriosam dolorum doloribus suscipit, sed non voluptatem in ducimus numquam distinctio, voluptate ipsa nostrum est, quam illo ullam cum molestias deserunt. Reiciendis consectetur possimus ipsum, nemo laborum fuga mollitia est. Eveniet quia, aliquam placeat, omnis ad veniam possimus, sit iusto officia unde dicta. Aperiam exercitationem ex esse rerum rem accusamus ab hic ad laborum eius alias id quisquam nobis reiciendis dolores, veniam nostrum culpa deleniti nam repudiandae fuga natus? Animi rerum porro earum? Sint explicabo odio rerum molestias facere repudiandae incidunt hic, dolorum fugit voluptate impedit, earum commodi illo quod, nobis adipisci autem aspernatur soluta minus optio inventore. Mollitia necessitatibus autem impedit, unde minus nesciunt dignissimos. Aspernatur temporibus possimus perspiciatis minima magnam illum vitae debitis numquam, mollitia odit!
+       </div>
+   </div>
+   <hr>
+   <!-- 01:33:35 section-9 CSS Height and Width -->
+   <div>
+       <hr>
+       <h2>CSS Height and Width</h2>
+       <hr>
+       <ul>
+           <li>When we try to set <b>height</b> and <b>width</b> to any element by percentage then it will calculate % from <b>just privious parent</b>. If no parent found then it will calculate according to <b>body</b> element.</li>
+       </ul>
+       <div id="hw-parent">
+           <div id="hw-child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, veritatis veniam blanditiis modi cupiditate vitae nulla delectus necessitatibus dolores iure alias, reprehenderit dicta consequuntur, iusto ipsam omnis hic possimus rerum!</div>
+       </div>
+       <br><br>
+       <div id="hw-child-of-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quis delectus vero? Sit fuga provident voluptates? Voluptatem mollitia et rerum ipsa deleniti, adipisci corrupti, alias dolor, dolorum neque omnis quidem?</div>
+   </div>
+   <hr>
+   <!-- 01:41:36 section-10 CSS Padding -->
+   <div>
+       <hr>
+       <h2>CSS Padding</h2>
+       <hr>
+       <ul>
+           <li>Gap between <b>border</b> and <b>content</b> is called padding.</li>
+           <li>You can not provide negative value.</li>
+       </ul>
+       <div id="padd-div">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, corporis exercitationem libero maxime veniam esse ea. Eum ipsum dicta porro expedita molestiae consectetur natus odit quis, doloremque, minima quidem earum.</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 01:45:06 section-11 CSS Margins -->
+   <div id="margin-parent">
+       <hr>
+       <h2>CSS Margins</h2>
+       <hr>
+       <ul>
+           <li>Space between one element's border to another element is called Margin.</li>
+           <li>You can provide negative value too.</li>
+           <li>Margin Collapse</li>
+           <ul>
+               <li>This will only work in <b>top</b> and <b>bottom</b></li>
+               <li>Suppose If you have two div, you have given <b>margin-bottom: 20px;</b> to <b>upper</b> div and <b>margin-top: 50px;</b> to <b>lower</b> div then <b>whichever is higher will be applied.</b></li>
+               <li>Suppose If you have two div, you have given <b>margin-left: 20px;</b> to <b>left</b> div and <b>margin-right: 50px;</b> to <b>right</b> div then both will be added and then their <b>sum</b> will be applied.</li>
+               
+           </ul>
+       </ul>
+       <div class="margin-cl-div">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil possimus consequatur nesciunt, earum nemo totam maxime debitis, reprehenderit a perferendis iure ipsam voluptatem repellendus dignissimos placeat eos soluta corporis deserunt?</p>
+       </div>
+       <div class="margin-cl-div" id="margin-div">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil possimus consequatur nesciunt, earum nemo totam maxime debitis, reprehenderit a perferendis iure ipsam voluptatem repellendus dignissimos placeat eos soluta corporis deserunt?</p>
+       </div>
+       <div class="margin-cl-div">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil possimus consequatur nesciunt, earum nemo totam maxime debitis, reprehenderit a perferendis iure ipsam voluptatem repellendus dignissimos placeat eos soluta corporis deserunt?</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 01:55:08 section-12 CSS Box Model -->
+   <div>
+       <hr>
+       <h2>CSS Box Model</h2>
+       <hr>
+       <img src="./images/doc/box-model.png" alt="box-model">
+       <img src="./images/doc/box-model-2.png" alt="box-model-2">
+   </div>
+   <hr>
+   <!-- 01:58:00 section-13 CSS Text -->
+   <div>
+       <hr>
+       <h2>CSS Text</h2>
+       <hr>
+       <div id="div-text">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor hic cum iure mollitia quisquamhsghjsgdwewiiuwwwhdkcioh culpazxxxxxddjhsjkhsjkshwoiruriwwu blanditiis odio eaque, asperiores deserunt dolores eos minima fuga, quo enim voluptatibus tenetur ullam atque? Doloremque molestias minus, corrupti maxime sit vitae iste animi adipisci architecto. Officiis corporis possimus sit explicabo quas quo culpa minus recusandae eum, cum numquam voluptate in est unde id nulla iusto. Aperiam quis omnis deleniti fuga? Dolore vero tempore aperiam? Totam cupiditate cum quaerat quia soluta nemo dignissimos, esse aut repellat blanditiis dolorem placeat quod accusantium amet voluptatibus unde vitae, quasi, sequi dolores enim. Omnis saepe sint ullam aliquam corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusantium ipsum autem libero expedita, voluptas distinctio dicta sequi nostrum tempora mollitia? Sequi ab fugit accusantium qui saepe, blanditiis nemo quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolorum adipisci cupiditate voluptatum laudantium, omnis ad ex ratione in neque, cum porro, veniam assumenda ipsa eius ipsam excepturi quas totam. </p>
+       </div>
+       <div>
+        <ul>
+            <li>
+             text-align: justify; <br>&nbsp; It fill gaps at the end of lines like we see in newspapers.
+            </li>
+            <br>
+            <li>
+                text-transform: uppercase; <br>&nbsp; It convert all text to uppercase.class-selector
+            </li>
+            <br>
+            <li>
+                line-height: 30px; <br>&nbsp; Space between lines.
+            </li>
+            <br>
+            <li>
+                text-indent: 50px; <br>&nbsp; First line will start 50px from left.
+            </li><br>
+            <li>
+                letter-spacing: 4px; <br>&nbsp; Space between letters.
+            </li> <br>
+            <li>
+                word-spacing: 15px; <br>&nbsp; Space between words.
+            </li><br>
+            <li>
+                white-space: pre; <br>&nbsp; This will work as pre tag.
+            </li>
+            </li><br>
+            <li>
+                white-space: nowrap; <br>&nbsp; This will show all text as one line.
+            </li> <br>
+            <li>
+                word-wrap: break-word;<br>&nbsp; For this property your word should be bigger than container.
+            </li>
+        </ul>
+       </div>
+       <div>
+           <p id="shadow-text">Shadow Text</p>
+       </div>
+       <div>
+           <ul>
+               <li>Shadow are made up of 4 things i.e <b> horizontal, vertical, blur <i>and</i>  color.</b></li> <br>
+               &nbsp;&nbsp; text-shadow: 2px -10px 7px purple ;
+           </ul>
+       </div>
+       <div id="vertical-div">
+           <p id="vertical-text">Mobivisits</p>
+       </div>
+       <div>
+           <ul>
+               <li>Sometimes you need to write text vertically.</li>
+           </ul>
+       </div>
+   </div>
+   <hr>
+   <!-- 02:18:21 section-14 CSS Links -->
+   <div>
+       <hr>
+       <h2>CSS Links</h2>
+       <hr>
+       <div id="css-link">
+           <a href="https://www.24.com" target="_blank" id="link-tag-example">Google</a>
+       </div>
+       <div>
+           <ul>
+               <li>text-decoration: none; <br>&nbsp;This removes the underline from link.</li><br>
+               <li>There are four stages of link which is also known ae pseudo elements of link: <br>
+                <ul>
+                    <li>:link</li>
+                    <li>:visited</li>
+                    <li>:hover</li>
+                    <li>:active</li>
+                </ul>
+                </li>
+           </ul>
+       </div>
+   </div>
+   <hr>
+   <!-- 02:24:25 section-15 CSS Fonts -->
+   <div>
+       <hr>
+       <h2>CSS Fonts</h2>
+       <hr>
+       <ul>
+           <li>There are different format of fonts, some of them which is widely supported by browser are listed below: <br>
+                <ul>
+                    <li>ttf</li>
+                    <li>otf</li>
+                    <li>woff</li>
+                </ul>
+            </li>
+            <li>
+                There are two way to includes font in your website: <br>
+                <ul>
+                    <li class="online-fonts">Online Service</li>
+                    <ul>
+                        <li class="online-fonts">Search for google fonts</li>
+                        <ol>
+                            <li id="Poppins-font">Select the fonts and click on <b>embed</b> copy code and paste inside <b>head</b> tag.</li>
+                            <li id="Texturina-font">Now add css rules to your desired element.</li>
+                        </ol>
+                    </ul>
+                    <li class="download-font">Download font and link</li>
+                    <ol>
+                        <li>Create folder in your project with name <b>fonts</b>.</li>
+                        <li>Copy the downloaded fonts to that folder and extract there.</li>
+                        <li>Now include that file. For that you have write samll code at the top of your <b>styles.css</b> file.</li>
+                        <li class="download-font"> Ssample: <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus dolor minus at voluptas quos ad sed voluptate error. Nihil ipsum quo voluptatum blanditiis omnis nemo quibusdam atque dignissimos harum eligendi!</li>
+                        <xmp class="code-bg-color">
+        @font-face {
+            font-family: avi_custom;
+            src: url('/fonts/hey-girl.ttf');
+        }
+                        </xmp>
+                    </ol>
+                    <ol>
+                        Error Detection
+                        <li>Check your syntax</li>
+                        <li>Check your linked font</li>
+                        <ul>
+                            <li><xmp class="code-bg-color">W:/Working/Avinash/html/Practice_html/fonts/Montana.ttf</xmp></li> &nbsp; replace your font file url to yours. if your font download started means your path is correct.
+                        </ul>
+                    </ol>
+                </ul>
+            </li>
+            
+       </ul>
+   </div>
+   <hr>
+   <!-- 02:51:37 section-16 CSS Units -->
+   <div>
+       <hr>
+       <h2>CSS Units</h2>
+       <hr>
+       <div>
+           <img src="/images/doc/units_1.png" alt="">
+           <img src="/images/doc/units_2.png" alt="">
+           <img src="/images/doc/units_3.png" alt="">
+           <img src="/images/doc/units_4.png" alt="">
+       </div>
+    These all are absolute values for height and width.
+    <xmp class="code-bg-color">
+    #absolute-parent {
+        border: 4px solid green;
+        /* width: 10cm; */
+        /* width: 200mm; */
+        /* width: 6inch; */
+        /* width: 100pt; */
+        width: 80pc;
+    }
+    </xmp>
+       <div id="absolute-parent">
+           <p>This is Parent Text</p>
+           <div id="absolute-child">
+               <p>This is Child Text</p>
+           </div>
+       </div> <br>
+    These all are Relative values for height and width.
+    <xmp class="code-bg-color">
+    #relative-parent {
+        border: 2px solid red;
+        /* width: 800px; */
+        height: 50vh;
+        width: 50vw;
+    
+    }
+    
+    #relative-child {
+        border: 2px solid blueviolet;
+        width: 50%;
+    }
+    </xmp>
+       <div id="relative-parent">
+           <p>This is Parent Text</p>
+           <div id="relative-child">
+               <p>This is Child Text</p>
+           </div>
+       </div> <br>
+    These all are Relative values for fonts (Em & Rem)
+    <ul>
+        <li>When you use <b style="color: crimson;">em</b> then it takes its relative size from it's direct parent.Let suppose its parent have font size of <b style="color:blue;">30px</b> and you have given <b style="color:blue;">0.5em</b> to its child then the actual font size of child will be <b style="color:blue;">30x0.5px</b> i.e 15px</li>
+        <li>When you use <b style="color: crimson;">rem</b> then it takes its relative size from <b style="color: blueviolet;">HTML Tag</b>.Let suppose you have given font size of <b style="color:blue;">14px</b> to HTML tag and you have given <b style="color:blue;">2rem</b> to its child then the actual font size of child will be <b style="color:blue;">14x2px</b> i.e 28px</li>
+    </ul>
+    <xmp class="code-bg-color">
+    <!-- Rm example -->
+
+        #relative-parent-fonts {
+            border: 2px solid yellow;
+            font-size: 30px;
+        }
+        #relative-child-fonts {
+            font-size: 2em;
+        }
+    <!-- Rem example -->
+
+        html {
+            font-size: 18px;
+        }
+        
+        #relative-parent-fonts {
+            border: 2px solid yellow;
+            font-size: 30px;
+        }
+        #relative-child-fonts {
+            font-size: 2rem;
+        }
+    </xmp>
+    <div id="relative-parent-fonts">
+        <p>This is Parent Fonts Example</p>
+        <div id="relative-child-fonts">
+            <p>This is Child Fonts Example</p>
+        </div>
+    </div>
+   </div>
+   <hr>
+   <!-- 03:10:26 section-17 CSS Cursor -->
+   <div>
+       <hr>
+       <h2>CSS Cursor</h2>
+       <hr>
+       <ul>
+           <li>This is used to change the mouse pointer whenever you hover over an elements.</li>
+       </ul>
+    <xmp class="code-bg-color">
+        #css-cursor {
+            border: 1px solid orangered;
+            cursor: crosshair;
+        }
+    </xmp>
+       <div id="css-cursor">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 03:15:24 section-18 CSS !important -->
+   <div>
+       <hr>
+       <h2>CSS !important</h2>
+       <hr>
+       <ul>
+           <li>This tag removes all the perivious css rules written for that particular element and apply the rule written with <b>!important</b> </li>
+           <li>This is not best practice to use when you are writing your code from scratch.</li>
+           <li>You can use when you are working with third party plugin or theme and you want to keep changes to your repo only.</li>
+       </ul>
+   </div>
+   <hr>
+   <!-- 03:18:43 section-19 CSS Box Shadow -->
+   <div>
+       <hr>
+       <h2>CSS Box Shadow</h2>
+       <hr>
+       <ul>
+           <li>To apply box shadow use the below code</li>
+           <ul>
+               <li>Syntax: box-shadow: horizontal vertical blur-radius color;</li>
+               <li>Shadow can multiple
+                   <ul>
+                       <li>Inside</li>
+                       <ul>
+                           <li>For this you have to use <b>inset</b> after color.</li>
+                       </ul>
+                       <li>Multiple</li>
+                       <ul>
+                           <li>
+                               <xmp class="code-bg-color">
+        box-shadow: -10px -20px 10px orangered, 10px 20px 10px yellow;
+                               </xmp>
+                           </li>
+                       </ul>
+                   </ul>
+               </li>
+               <li>Note: All values should be in <b>px</b>.</li>
+               <ul>
+                   <li> 
+                       <xmp class="code-bg-color">
+        #box-2 {
+            border: 1px solid green;
+            background-color: greenyellow;
+            margin: 100px;
+            padding: 20px;
+            width: 500px;
+            box-shadow: -10px -20px 50px orangered;
+        }
+                       </xmp>
+                   </li>
+               </ul>
+           </ul>
+       </ul>
+       <div id="box-1">
+           <div id="box-2">
+               <p>Here is the text</p>
+           </div>
+       </div>
+   </div>
+   <hr>
+   <!-- 03:24:06 section-20 CSS Opacity -->
+   <div>
+       <hr>
+       <h2>CSS Opacity</h2>
+       <hr>
+       <ul>
+           <li>This property is used for making element transparent.</li>
+           <li>Opacity value lies between <b>0</b> to <b>1</b>.</li>
+           <ul>
+               <li>Example</li>
+               <xmp class="code-bg-color">
+            #color-box {
+                background-color: greenyellow;
+                height: 500px;
+                width: 500px;
+                margin-bottom: 20px;
+                opacity: 0.6;
+            }
+               </xmp>
+           </ul>
+       </ul>
+       <div>
+           <div id="color-box"></div>
+           <img src="./images/girl_1_crpd.jpg" alt="cropped girl" id="css-opacity">
+       </div>
+   </div>
+   <hr>
+   <!-- 03:30:30 section-21 CSS Filter -->
+   <div>
+       <hr>
+       <h2>CSS Filter</h2>
+       <hr>
+       <ul>
+           <li>This is used on image</li>
+           <ul>
+               <li>Example: </li>
+               <ul>
+                   <li>
+                       <xmp class="code-bg-color"> 
+        #css-filter {
+            filter: blur(2px);
+            filter: brightness(50%);
+            filter: contrast(70%);
+            filter: drop-shadow(30px -20px 5px yellow);
+            filter: grayscale(100%);
+            filter: hue-rotate(90deg);
+            filter: invert(70%);
+            filter: opacity(50%);
+            filter: saturate(50%);
+            filter: sepia(90%);
+        }
+                       </xmp>
+                   </li>
+               </ul>
+           </ul>
+       </ul>
+       <div>
+           <img src="/images/girl_only.jpg" alt="" id="css-filter">
+       </div>
+   </div>
+   <hr>
+   <!-- 03:35:51 section-22 CSS Image Sprites -->
+   <div>
+       <hr>
+       <h2>CSS Image Sprites</h2>
+       <hr>
+       <div>
+           <ul>
+               <li>Image Sprites is made up of small images into one big image and again in css that will be used as individual image.</li>
+               <li>Image Sprites only be used as background image.</li>
+               <li>It will not work directly as image.</li>
+               <li>It will reduce server request.</li>
+               <li>It improves page load time.</li>
+               <li>You can use in some cases like you have multiple social media icons, payment icons etc</li>
+               <li>Do not use for large image because it will increase your image <b>size</b></li>
+           </ul>
+       </div>
+       <div id="sprite">
+
+       </div>
+   </div>
+   <hr>
+   <!-- 03:44:09 section-23 CSS Gradients -->
+   <div>
+       <hr>
+       <h2>CSS Gradients</h2>
+       <hr>
+       <div>
+           <ul>
+               <li>Mixing of two color smoothly produces the gradients.</li>
+               <li>There are two type of gradients:
+                   <ol>
+                       <li>Linear</li>
+                       <li>Radial</li>
+                   </ol>
+               </li>
+           </ul>
+       </div>
+       <h3>Linear Gradients</h3>
+       <div id="linear-gradient-1">
+           <h1 style="text-transform: uppercase; text-align: center; color: whitesmoke;margin-top: 150px;">Default Direction</h1>
+           <xmp style="text-align: center; color: whitesmoke;margin-top: 50px; line-height: auto; font-size: 30px;">
+#linear-gradient-1 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(#00ff00, #0000ff);
+}
+           </xmp>
+       </div>
+       <div id="linear-gradient-2">
+           <h1 style="text-transform: uppercase; text-align: center; color: whitesmoke;margin-top: 150px;">to right Direction</h1>
+           <xmp style="text-align: center; color: whitesmoke;margin-top: 50px; line-height: auto; font-size: 30px;">
+#linear-gradient-2 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(to right,#00ff00, #0000ff, #ff0000);
+}
+           </xmp>
+       </div>
+       <div id="linear-gradient-3">
+           <h1 style="text-transform: uppercase; text-align: center; color: whitesmoke;margin-top: 150px;">to bottom right Direction</h1>
+           <xmp style="text-align: center; color: whitesmoke;margin-top: 50px; line-height: auto; font-size: 25px;">
+#linear-gradient-3 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(to bottom right,#00ff00, #0000ff, #ff0000);
+}
+}
+           </xmp>
+       </div>
+       <div id="linear-gradient-4">
+           <h1 style="text-transform: uppercase; text-align: center; color: whitesmoke;margin-top: 150px;">degree Direction</h1>
+           <h3>You can also provide <b>degree</b></h3>
+           <xmp style="text-align: center; color: whitesmoke;margin-top: 50px; line-height: auto; font-size: 25px;">
+#linear-gradient-4 {
+    height: 500px;
+    border: 1px solid grey;
+    background-image: linear-gradient(-160deg ,#00ff00, #0000ff, #ff0000);
+}
+}
+           </xmp>
+       </div>
+       <h3>Radial Gradients</h3>
+       <ul>
+           <li>By default the shape is (eclipse) ovel.</li>
+           <li>You can change this by this <b>background-image: radial-gradient(circle, #fbff00, #ff0000);</b></li>
+       </ul>
+
+       <div id="radial-gradient-1">
+
+       </div>       
+       <div id="radial-gradient-2">
+
+       </div>       
+   </div>
+   <hr>
+   <!-- 03:50:44 section-24 CSS Overflow -->
+   <div>
+       <hr>
+       <h2>CSS Overflow</h2>
+       <hr>
+       <ul>
+           <li>Overflow works when your content is greater than the size of your container.</li>
+           <li>It only works for <b>block elements.</b></li>
+           <li>It works for some block elements only when you give <b>height</b> and <b>width</b>.</li>
+       </ul>
+       <ul>
+           <li><b> hidden  : </b> This will only show as much as content can fit inside container and rest of content will be hidden.</li>
+           <li><b> auto    : </b> It adjust all the content by itself and provide scroll bar accordingly.</li>
+           <li><b> scroll  : </b> It will adjust automatically.</li>
+           <li><b> visible : </b> By default this property is activated.</li>
+       </ul>
+       <ul>
+           <li>overflow-x</li>
+           <li>overflow-y</li>
+       </ul>
+       <div id="overflow">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ratione iste optio facere sit praesentium dicta consequuntur, quo ullam, amet suscipit quis neque illo repellendus vel. Nostrum repellendus quaerat natus. Harum nesciunt dolorem odit cupiditate quis sit ex animi doloremque quam incidunt, ab illum obcaecati beatae vel blanditiis vitae ut maiores provident, consectetur tenetur voluptatem pariatur quo quos. Eaque, minus sint cumque pariatur nulla aliquid distinctio reiciendis totam esse, voluptate ratione optio, quae quasi earum. Impedit temporibus architecto molestiae ratione modi deleniti reprehenderit amet animi, recusandae qui esse ipsa excepturi error odit magnam adipisci eius fuga quas reiciendis, explicabo odio praesentium ut. Nesciunt, esse rerum veniam repellat quidem praesentium officiis vitae iste, odit animi minima provident eligendi omnis labore pariatur dolor obcaecati deserunt ipsam vero, facilis quam consequuntur! Sint hic facilis consectetur necessitatibus, at rerum eius accusamus incidunt. Voluptatibus, facilis ad incidunt assumenda, quod sequi facere harum ea repellat dolorum eos explicabo, blanditiis odit minima quasi debitis minus aut aliquam corrupti? Delectus voluptate explicabo fuga culpa mollitia non doloribus in magni architecto vitae. Ducimus soluta doloribus maxime eius magni recusandae quae doloremque harum perferendis temporibus ea et totam voluptates fuga suscipit distinctio, delectus dolorum, ipsa voluptatum quaerat quo itaque. Reiciendis, magni? Nihil molestiae voluptates velit illum id natus facere itaque. Qui, provident dignissimos facere tenetur architecto libero quas beatae impedit, aspernatur eaque assumenda accusantium alias ducimus consequatur quos excepturi nostrum mollitia voluptatibus, perferendis adipisci odio cum laboriosam! Tempore repellat dolore pariatur veniam aut commodi fugit molestias. Assumenda voluptate dolorum ut fuga obcaecati amet nisi nobis deserunt modi quia. Provident, nemo! Praesentium itaque quasi expedita aliquam, perspiciatis corporis iure recusandae! Repellendus nam doloremque sint obcaecati voluptatem. Ipsa nulla modi consequuntur vel quae? Fugiat magni nobis beatae quas eius laboriosam saepe earum, recusandae amet repudiandae laudantium ut, modi accusamus hic! Dolorem aliquam ut modi officia, sint perspiciatis fugit optio architecto eaque mollitia neque necessitatibus laudantium culpa aliquid iure aut accusamus consectetur ipsam incidunt minus! Distinctio aperiam officiis, sit voluptates odio optio minus odit excepturi assumenda, minima facere eligendi molestias totam doloribus! Quasi reiciendis nostrum, sint labore facere suscipit iusto eum, explicabo vel ad id quo voluptatem facilis! Eveniet dolore asperiores esse? Minima, earum minus! Laboriosam accusamus commodi ex sit cum nulla modi enim laudantium, eius quam eum, amet libero dolorum veritatis reiciendis temporibus quaerat? Cumque maiores tempora excepturi aliquid sunt perspiciatis quibusdam blanditiis minus quas voluptatibus repellat voluptates, molestias, inventore harum in voluptatem! Veniam, ipsam vitae qui suscipit minima praesentium nisi voluptates iste! Consequuntur voluptas facilis magni voluptatem recusandae sapiente fugiat, quis eum, iure nulla explicabo at. Et iure voluptatibus iusto, soluta voluptate architecto dolorum error quia tempore deleniti maiores officia nisi doloremque necessitatibus distinctio minima, dolores cumque quam consequuntur ut placeat aspernatur! Beatae ad nesciunt hic voluptatibus dolorem accusamus molestiae debitis et harum autem velit blanditiis, fuga sequi dolor ipsum ullam laudantium nisi libero veniam. Obcaecati eos, consequatur dicta odit praesentium officiis beatae corrupti eligendi minima, eum, tempore omnis ducimus dolores magni eaque deserunt doloremque quaerat molestias itaque harum facilis temporibus. Reprehenderit quisquam odio veniam, alias eius maiores hic similique veritatis laboriosam, corporis provident atque velit expedita accusantium. Obcaecati maxime explicabo adipisci corporis harum illo a nisi, libero magnam officia totam odit quidem expedita amet enim repudiandae? Debitis, aliquid iste ipsam tempora dolorem, enim accusantium ad magni earum ipsa esse ipsum ducimus possimus assumenda asperiores molestiae repellendus, dolore voluptatum? Quas doloremque nobis voluptate deleniti iste consectetur accusantium blanditiis natus reiciendis dolores eius, ut pariatur repellat maxime odit mollitia officia cum delectus et reprehenderit voluptatum quam? Eveniet sit dolore placeat voluptatum, qui voluptas. Atque, cumque at nulla id rerum aut modi sit? Ut dicta nostrum, veritatis at aliquam, facilis sapiente voluptate amet qui, quod mollitia. A tenetur error eos culpa cum quaerat, laborum eligendi natus saepe, commodi odio voluptates obcaecati expedita architecto id mollitia laudantium aspernatur aut repellendus. Laudantium accusantium repudiandae error quas sed, odit commodi? Consequuntur eos placeat iste aperiam totam animi unde pariatur, hic eveniet, eum sint quos quas ea esse quasi natus debitis. Ipsa quaerat ducimus, ipsum provident commodi dicta magni tempora, explicabo dolores vel pariatur. Molestiae repellat officiis excepturi perferendis eum non ea beatae, autem quos. Eaque ducimus vitae ipsam deserunt aspernatur incidunt itaque illo quisquam perspiciatis, aliquam necessitatibus facere deleniti aliquid exercitationem inventore magnam, cumque cupiditate error dolores! Nesciunt, ipsum voluptate est sint dolorum cum libero blanditiis adipisci. Dignissimos incidunt perspiciatis vitae laborum nobis, qui enim velit molestias pariatur libero quibusdam sed dolore provident est fugiat officiis ducimus dolores, nulla et architecto? Necessitatibus est mollitia accusantium? Provident similique sed amet molestiae quasi tenetur distinctio eveniet laborum voluptas dolorem, ratione quidem voluptatem officiis, sequi totam voluptate assumenda placeat eum ipsum quos facilis, tempore error. Porro ipsum eum quaerat, provident quasi voluptas assumenda dolorem sint voluptates qui est, repellendus non quidem eaque ut atque illo sed debitis recusandae earum quae molestiae eveniet. Quae eos est delectus perferendis porro eligendi aperiam voluptas minus illum velit! Molestias temporibus esse a magni, ipsam amet tempora praesentium alias rerum nesciunt voluptas itaque beatae numquam explicabo molestiae? Quidem, aliquam repellat unde molestias consectetur asperiores corporis minus maxime, minima, optio assumenda dolore quaerat quibusdam necessitatibus perspiciatis explicabo possimus voluptate reiciendis at vel nulla iste vitae laborum? In accusantium commodi asperiores amet? Quae, culpa mollitia nam temporibus esse asperiores voluptatem inventore quisquam nemo itaque excepturi sint dolor similique necessitatibus alias laboriosam? Ea beatae, excepturi fugiat sunt quis minima architecto nam consequatur esse odio recusandae. Blanditiis reiciendis aliquam recusandae minus mollitia ratione animi voluptatum, provident esse vel amet, quas necessitatibus, odio aspernatur officiis exercitationem numquam magnam repellat deleniti illum nam. Non veritatis illum voluptate, ex itaque placeat, molestias cumque tempore hic fuga recusandae, doloremque enim earum obcaecati amet debitis sed saepe? Assumenda, id delectus esse magnam officiis voluptates aliquam, molestias repudiandae eum, autem harum blanditiis reiciendis quis iusto molestiae illo architecto nobis quas explicabo veritatis non laboriosam quaerat sit. Officiis reiciendis tempora ex vero recusandae ullam quod corrupti dolorum voluptatem totam deleniti est perspiciatis ad, dolores, eum dicta repudiandae error eveniet dolorem, amet blanditiis. Repellendus, culpa blanditiis.</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 03:57:50 section-25 CSS Resizable -->
+   <div>
+       <hr>
+       <h2>CSS Resizable</h2>
+       <hr>
+       <ul>
+           <li>This gives ability to resize html elements.</li>
+           <li>You can create resizable div.</li>
+           <li>You can stop textarea to resize.</li>
+           <li>Resiz can only be used for block element which have overflow auto, scroll or hidden.</li>
+       </ul>
+       <div id="resize">
+
+       </div>
+       <br>
+       <textarea name="" id="" cols="30" rows="10" id="textarea-resize"></textarea>
+   </div>
+   <hr>
+   <!-- 04:01:35 section-26 CSS Lists -->
+   <div>
+       <hr>
+       <h2>CSS Lists</h2>
+       <hr>
+
+       <ul id="css-ul-list">
+           <li>safari</li>
+           <li>altroz</li>
+           <li>nexon</li>
+           <li>sumo</li>
+           <li>indica</li>
+       </ul>
+       <ol id="css-ol-list">
+           <li>pen</li>
+           <li>paper</li>
+           <li>pencil</li>
+           <li>erraser</li>
+           <li>sharpner</li>
+       </ol>
+   </div>
+   <hr>
+   <!-- 04:09:24 section-27 CSS Tables -->
+   <div>
+       <hr>
+       <h2>CSS Tables</h2>
+       <hr>
+       <ul>
+           <li><b>tr</b> do not take border.</li>
+           <li>To merge all border use <b>border-collapse: collapse</b>.</li>
+           <li>You can not use <b>margin</b> in <b>td & th</b>.</li>
+           <li>You can use <b>border-spacing</b> at place of <b>margin</b>.</li>
+           <li>To use <b>border-spacing</b> you have to remove or set default to <b>border-collapse: seperate</b> property.</li>
+           <li>To hide empty cell you can use <b>empty-cells: hide</b>.</li>
+           <li> Table Layout
+               <ul>
+                    <li><b>Fixed</b> is trying to keep all elements of equal width.</li>
+                    <li><b>auto</b> is trying adjust width for better view. </li>
+                </ul>
+           </li>
+       </ul>
+       <div>
+           <table id="table-styling">
+               <caption id="table-caption">Table CSS</caption>
+               <thead>
+                   <tr>
+                       <th>Column 1</th>
+                       <th>Column 2</th>
+                       <th>Column 3</th>
+                   </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                        <td>car</td>
+                        <td>bus</td>
+                        <td>truck</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">indore</td>
+                        <!-- <td>patna</td> -->
+                        <td rowspan="2">delhi</td>
+                    </tr>
+                    <tr>
+                        <td>tata</td>
+                        <td>maruti</td>
+                        <!-- <td>hero</td> -->
+                    </tr>
+               </tbody>
+               <tfoot>
+                   <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                   </tr>
+               </tfoot>
+           </table>
+       </div>
+   </div>
+   <hr>
+   <!-- 04:24:51 section-28 CSS Functions -->
+   <div>
+       <hr>
+       <h2>CSS Functions</h2>
+       <hr>
+       <ul>
+           <li>Some important functions in css</li>
+           <ul>
+               <li>calc()</li> : This is very usefull in giving width when you want that some portion should always be same even you changes the screen size.
+               <li>var()</li>
+               <li>Syntax to declare variable</li>
+               <ul>
+                   <li>
+                       <xmp class="code-bg-color">
+:root{
+    --primary-color: teal;
+    --btn-color: tomato;
+    --txt-color: white;
+}
+
+#css-function {
+    background-color: var(--primary-color);
+    height: 200px;
+    width: calc(100% - 200px);
+}
+
+#anchor-fun-exmp {
+    padding: 10px 30px;
+    background-color: var(--btn-color);
+    margin: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+                       </xmp>
+                   </li>
+               </ul>
+           </ul>
+       </ul>
+       <div id="css-function">
+        <xmp style="color: whitesmoke; font-size: 20px;">
+            #css-function {
+                background-color: teal;
+                height: 200px;
+                width: calc(100% - 200px);
+            }
+        </xmp>
+       </div>
+       <hr>
+       <a href="https://www.google.com" id="anchor-fun-exmp" target="_blank">Google</a>
+   </div>
+   <hr>
+   <!-- 04:35:52 section-29 CSS Box Sizing -->
+   <div>
+       <hr>
+       <h2>CSS Box Sizing</h2>
+       <hr>
+       <ul>
+           <li>Whenever we give height, width, padding, margin all are summed up and given to the <b>content</b>.</li>
+           <li>This happens due to box-model.</li>
+           <li>You can control this by assigning properties i.e <b>box-sizing</b>.</li>
+           <li>By default <b>box-sizing:content-box</b>. This will give all thing to the content not conatiner.</li>
+           <li>For fixing conatiner size you have to use <b>box-sizing: border-box</b>. All adjustment will be made on content.</li>
+       </ul>
+       <div id="without-box-sizing">
+            Div
+       </div>
+       <hr>
+       <div id="with-box-sizing">
+            Div
+       </div>
+   </div>
+   <hr>
+   <!-- 04:41:32 section-30 CSS initial vs inherit -->
+   <div>
+       <hr>
+       <h2>CSS initial vs inherit</h2>
+       <hr>
+       <ul>
+           <li>These two properties are used with almost every element of css.</li>
+           <li>initial: It means the defalut css value of that element.</li>
+           <li>inherit: It means that inherit property from your parent.    </li>
+       </ul>
+       <div id="green">
+           Green Text <br>
+           <a href="" id="red">Link 1</a> <br>
+           <a href="" id="initial">Link 2</a> <br>
+           <a href="" id="inherit">Link 3</a>
+       </div>
+   </div>
+   <hr>
+   <!-- 04:46:33 section-31 CSS The object-fit Property -->
+   <div>
+       <hr>
+       <h2>CSS The object-fit Property</h2>
+       <hr>
+       <ul>
+           <li>Object-fit property can be used for both <b>video</b> and <b>images</b>.</li>
+       </ul>
+       <xmp class="code-bg-color">
+#object-fit-image {
+    border: 1px solid red;
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+    background-position: top right;
+}
+       </xmp>
+       <div>
+           <img src="/images/girl_1.jpg" alt="girl" id="object-fit-image">
+       </div>
+   </div>
+   <hr>
+   <!-- 04:50:45 section-32 CSS Pseudo-classes -->
+   <div>
+       <hr>
+       <h2>CSS Pseudo-classes</h2>
+       <hr>
+       <ul>
+           <li>Elements state is called pseudo class.</li>
+       </ul>
+       <div>
+           <h1>Heading One</h1>
+           <p>This is a p tag</p>
+           <p>This is a p tag</p>
+           <p>This is a p tag</p>
+           <p>This is a p tag</p>
+           <p>This is a p tag</p>
+           <br><br>
+           <xmp class="code-bg-color">
+    #pseudo-exmp-2>li:first-child {
+        color: rgba(255, 0, 0, 0.5);
+        font-size: 30px;
+    }
+    
+    #pseudo-exmp-2>li:last-child {
+        color: chartreuse;
+        font-size: 30px;
+    }
+           </xmp>
+           <br>
+           <ul id="pseudo-exmp-2">
+               <li>List 1</li>
+               <li>List 2</li>
+               <li>List 3</li>
+               <li>List 4</li>
+               <li>List 5</li>
+           </ul>
+           <br><br>
+           <xmp class="code-bg-color">
+    #pseudo-exmp-3>li:nth-child(even) {
+        color: chartreuse;
+        font-size: 30px;
+        background-color: gainsboro;
+    }
+    
+    #pseudo-exmp-3>li:nth-child(odd) {
+        color:  rgba(255, 0, 0, 0.5);
+        font-size: 30px;
+        background-color: ghostwhite;
+    }
+           </xmp>
+           <br>
+           <ul id="pseudo-exmp-3">
+               <li>List 5</li>
+               <li>List 6</li>
+               <li>List 7</li>
+               <li>List 8</li>
+               <li>List 9</li>
+           </ul>
+           <br><br>
+           <xmp class="code-bg-color">
+    #pseudo-exmp-4>li:nth-child(3n + 1) {
+        color:  rgba(255, 0, 0, 0.5);
+        font-size: 30px;
+        background-color: ghostwhite;
+    }
+           </xmp>
+           <br>
+           <ul id="pseudo-exmp-4">
+               <li>List 10</li>
+               <li>List 11</li>
+               <li>List 12</li>
+               <li>List 13</li>
+               <li>List 14</li>
+               <li>List 10</li>
+               <li>List 11</li>
+               <li>List 12</li>
+               <li>List 13</li>
+               <li>List 14</li>
+           </ul>
+       </div>
+       <br><br>
+           <xmp class="code-bg-color">
+    #input-focus:focus {
+        border: 3px solid fuchsia;
+    }
+           </xmp>
+           <br>
+       <form action="">
+           <input type="text" id="input-focus">
+       </form>
+   </div>
+   <hr>
+   <!-- 04:59:10 section-33 CSS Pseudo-elements -->
+   <div>
+       <hr>
+       <h2>CSS Pseudo-elements</h2>
+       <hr>
+       <ul>
+           <li>You style specific portion or insert through css.</li>
+           <li>Syntax
+               <ul>
+<xmp class="code-bg-color">
+    selector::Pseudo-element {
+        
+    }
+</xmp>
+               </ul>
+           </li>
+       </ul>
+       <br>
+       <xmp class="code-bg-color">
+    #Pseudo-element>p::first-letter {
+        font-size: 30px;
+        color: fuchsia;
+        font-weight: bolder;
+        font-family: cursive;
+    }
+
+    #Pseudo-element>p::first-line {
+        font-size: 20px;
+    }
+       </xmp>
+       <div id="Pseudo-element">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum debitis ipsa, quibusdam qui asperiores corporis amet fuga sint maxime ut. Similique consequuntur facilis vero repellat sapiente autem eum sed obcaecati in aperiam voluptatibus, error quas? Modi nisi rem eum fugit repellat quisquam mollitia iste facilis, error rerum commodi temporibus debitis at sint maiores magnam! Facere perferendis, quod earum officiis distinctio cumque deserunt ad aspernatur nisi, laboriosam ullam at labore atque voluptate tenetur. Quis, sapiente. Dolorum esse, vel laborum sed ea amet excepturi eos quasi quis deleniti magni doloribus, praesentium inventore delectus fugiat, veritatis possimus quod fuga velit? Magni, adipisci.
+            </p>
+       </div>
+       <ul>
+           <li>How to insert element through css ?</li>
+       </ul>
+       <xmp class="code-bg-color">
+    #ins-element-thr-css>h1::before {
+        content: url(/images/right-arrow-50x50.png);
+    }
+    #ins-element-thr-css>h1::after {
+        content: url(/images/right-arrow-50x50.png);
+    }
+    #ins-element-thr-css>h1::after {
+        content: " added after";
+    }
+       </xmp>
+       <div id="ins-element-thr-css">
+           <h1>Heading</h1>
+       </div>
+       <ul>
+           <li>Universal Selector</li>
+       </ul>
+       <xmp class="code-bg-color"> 
+    ::selection {
+        background-color: yellowgreen;
+        color: red;
+    }
+       </xmp>
+   </div>
+   <hr>
+   <!-- 05:04:59 section-34 CSS Display and visibility -->
+   <div>
+       <h1 style="font-size: 40px; text-align: center; color: fuchsia;">Very Important Topics in CSS</h1>
+   </div>
+   <div>
+       <hr>
+       <h2>CSS Display and visibility</h2>
+       <hr>
+       <ul style="font-size: large; ">
+           <li>Every elements in html is rectangular box. How that rectungular box will behave ? it depends on its <b>display</b> property. </li>
+           <li>Every elements have its own default property which is provided by browser. It may vary from browser to browser.</li>
+           <li>Mainly there are four property which you will generally use: 
+               <ol>
+                   <li>Block
+                       <ol>
+                           <li>It takes full width.</li>
+                           <li>Always starts with new line.</li>
+                           <li>Width and Height can be applied.</li>
+                       </ol>
+                   </li>
+
+                   <li>Inline
+                    <ol>
+                        <li>It takes width as much as required according to content.</li>
+                        <li>It don't starts with new line.</li>
+                        <li>Width and Height can not be applied.</li>
+                    </ol>
+                   </li>
+                   <li>Inline Block
+                    <ol>
+                        <li>It takes width as much as required according to content.</li>
+                        <li>It do not starts with new line.</li>
+                        <li>Width and Height are applicable.</li>
+                    </ol>
+                   </li>
+                   <li>None
+                       <ol>
+                           <li>It just removes the block.</li>
+                       </ol>
+                   </li>
+               </ol>
+           </li>
+           <li><b>Block</b> and <b>Inline</b> are default.</li>
+           <li>There are two way to hide element
+               <ol>
+                   <li>Display: none</li>
+                   <ul>
+                       <li>when we apply this then it leaves place means completely removed from html. </li>
+                   </ul>
+                   <li>visibility: hidden
+                    <ul>
+                        <li>when we apply this then it not leaves place, means it occupy its place. </li>
+                    </ul>
+                   </li>
+               </ol>
+           </li>
+       </ul>
+   </div>
+   <hr>
+   <!-- 05:18:38 section-35 CSS Position -->
+   <div>
+       <hr>
+       <h2>CSS Position</h2>
+       <hr>
+       <ul>
+           <li>It defines element's position in website.</li>
+           <li>There are four type of position.
+               <ol>
+                   <li>Static</li>
+                   <ul>
+                       <li>This is default.</li>
+                   </ul>
+                   <li>Relative
+                       <ul>
+                           <li>It moves with respect to its own position.</li>
+                           <li>You have supply value to it.</li>
+                           <li>If you have given <b>position: relative;</b> to div or element then nothing will happen until you specify direction.</li>
+                           <li>After specifying position element will move but it will not leave its place. Means no other element can occupy that place.</li>
+                           <div id="parent-1">
+                                <div id="one-2"></div>
+                                <div id="two-3" style="color: white; text-align: center;">Positoned to it's own position</div>
+                                <div id="three-4"></div>
+                            </div>  
+                       </ul>
+                   </li>
+                   <br>
+                   <li>Fixed
+                       <ul>
+                           <li>This is according to viewport.</li>
+                           <div id="parent-3">
+                            <div id="one-8"></div>
+                            <div id="two-9" style="color: white; text-align: center;">Fixed Positioned</div>
+                            <div id="three-10"></div>
+                            </div> 
+                       </ul>
+                   </li>
+                   <li>Absolute
+                       <ul>
+                           <li>It start it's calculation from positioned parent.</li>
+                           <li>Positioned parent are those parent which contains <b>position properties other than static</b>.</li>
+                           <li>If you have given <b>position: absolute;</b> to div or element then it imidiately leave its position. </li>
+                           <li>After leaving its positioned other element will occupy that weather you provide <b>direction or not i.e top, bottom, left & right</b>.</li>
+                           <div id="parent-2">
+                                <div id="one-5"></div>
+                                <div id="two-6" style="color: white; text-align: center;"> Positoned a/c to it's direct positoned parent</div>
+                                <div id="three-7"></div>
+                            </div>  
+                       </ul>
+                   </li>
+               </ol>
+           </li>
+           <li>These four properties are applied only when your position is <b>relative, fixed or absolute</b>.i.e 
+               <ol>
+                   <li>Top</li>
+                   <li>Bottom</li>
+                   <li>left</li>
+                   <li>right</li>
+               </ol>
+           </li>
+       </ul>
+   </div>
+   <hr>
+   <!-- 05:37:50 section-36 CSS Layers and z-index -->
+   <div>
+       <hr>
+       <h2>CSS Layers and z-index</h2>
+       <hr>
+       <ul>
+           <li>Z-index only works for positioned element.</li>
+           <li>Elements with position <b>absolute, relative or fixed</b> can only eligible for z-index.</li>
+           <li>Higher z-index element will be on top.</li>
+           <li>z-index will arrange itself in decreasing order.</li>
+       </ul>
+       <div id="parentt">
+        <div id="onee"></div>
+        <div id="twoo"></div>
+        <div id="threee"></div>
+    </div>
+   </div>
+   <hr>
+   <!-- 05:43:17 section-37 CSS Float and Clear -->
+   <div>
+       <hr>
+       <h2>CSS Float and Clear</h2>
+       <hr>
+       <ul>
+           <li>Float
+               <ul>
+                   <li>This is used to move element left and right.</li>
+                   <li>Whenever we use float <b>li</b> comes out of <b>ul</b>. Means li comes out from its container. To handle this problem use <b>overflow: auto;</b></li>
+               </ul>
+           </li>
+           <li>Clear
+               <ul>
+                   <li>It tells that weather any element can be placed in right or left.</li>
+                   <li>Clear can be applied on floated element as well as non floated element.</li>
+               </ul>
+           </li>
+       </ul>
+       <div>
+           <h3>Float</h3>
+           <p id="float-parent"><img src="/images/girl_only.jpg" alt="" id="float-img-1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius cumque reprehenderit ullam quam eligendi beatae nostrum modi dolor debitis obcaecati, doloremque ducimus explicabo suscipit, quasi labore maxime repellat pariatur repellendus! Asperiores aspernatur impedit ut unde doloribus eum explicabo, aut excepturi! Quidem eaque repellendus ratione sapiente reiciendis numquam voluptate nulla accusamus ipsa praesentium, fugiat porro animi! Quos aspernatur officiis voluptatibus quod vitae nostrum ipsam molestias mollitia alias commodi unde laboriosam perspiciatis, nobis accusantium officia est odit sunt rerum tenetur esse maxime animi! Fugiat nulla, non atque eaque consequuntur quia esse minima commodi sed consectetur officia, incidunt voluptates dicta fugit corrupti natus recusandae labore eum cum? Delectus incidunt architecto commodi iste neque, minus officia accusantium, quaerat a dolorum beatae nisi doloribus aliquid? Reprehenderit nobis <img src="/images/hotspot.jpg" alt="" id="float-img-2"> unde aut sequi eveniet quaerat rem, quasi id sapiente ratione est commodi vel illo assumenda esse! Dignissimos, labore quaerat cupiditate tempore unde suscipit exercitationem laboriosam delectus molestiae ipsam. Harum sequi sed culpa pariatur atque unde quis natus, magnam nemo, excepturi adipisci dignissimos temporibus, voluptatum expedita possimus iste non modi eum molestias facilis. Rem, ipsum voluptatem. Ad placeat earum sit, alias ullam tempore consectetur. Dolorum, ut laudantium fugiat aliquid iusto modi dicta quod quam vero ad, natus, porro beatae quae minima necessitatibus eligendi recusandae amet culpa est exercitationem animi incidunt quisquam. Soluta velit rem possimus impedit aliquam deserunt fugiat perspiciatis minima facere, voluptates ea error asperiores! Est, at fugiat repudiandae officia quisquam neque perferendis optio repellat soluta dicta ex nam laborum, repellendus, magni itaque accusamus quos. Voluptates vitae nam porro officia ut numquam fugiat magnam nostrum impedit quisquam quas, fugit explicabo unde optio! Voluptatibus eveniet impedit non et at rerum deserunt dolorem. Sapiente ab vitae sit odit laudantium veritatis laborum minima molestiae, dolore suscipit labore reprehenderit ullam quidem voluptas placeat impedit accusantium soluta doloremque corrupti quisquam ex magni nisi. Aliquid, illum delectus magnam laboriosam omnis eius. Illum, vitae. Aperiam exercitationem numquam temporibus delectus, corporis repellendus aliquid odit provident. Temporibus, in quasi doloribus suscipit voluptatem atque recusandae nostrum dolore quod beatae tenetur, quae maxime distinctio dolorum soluta. Incidunt magni consequatur voluptatum placeat qui in, voluptate unde provident, eveniet maxime ratione! Quidem laborum et ex accusamus numquam assumenda. Consequuntur quaerat nulla provident dolor cumque repudiandae amet dolore expedita accusantium maiores itaque harum quam, a nostrum, voluptatibus enim facere ea porro quod illum. Quo, cum, harum fugit quae a ea iusto laudantium maxime aliquam praesentium eius possimus ex necessitatibus quas cupiditate vel!</p>
+       </div>
+       <div id="float-nav-container">
+           <ul id="float-nav-holder">
+               <li class="float-nav-items">
+                   <a href="https://www.google.com" target="_blank" style="text-decoration: none; color: white;">home</a>
+               </li>
+               <li class="float-nav-items">about us</li>
+               <li class="float-nav-items">contact</li>
+               <li class="float-nav-items">features</li>
+               <li class="float-nav-items">account</li>
+           </ul>
+       </div>
+       <br>
+       <div>
+           <h3>Clear</h3>
+           <div is="site-conatiner">
+               <div id="nav-container">Header Area</div>
+               <div id="header-conatiner">Content Area</div>
+               <div id="sidebar-conatiner">Sidebar Area</div>
+               <div id="footer-container">Footer Area</div>
+           </div>
+       </div>
+   </div>
+   <hr>
+   <!-- 06:03:26 section-38 CSS 2D Transforms -->
+   <div>
+       <hr>
+       <h2>CSS 2D Transforms</h2>
+       <hr>
+       <ul>
+           <li>This is used to rotate, scale, move or skew elements.</li>
+           <li>Transform does not work with inline elements.</li>
+       </ul>
+       <div id="wrapper-2d" class="btn-class">
+           <a href="https://www.google.com" target="_blank">Google</a>
+       </div>
+<br>
+       <div id="wrapper-2d-s1" class="btn-class">
+           <a href="https://www.facebook.com" target="_blank" id="fb">Facebook</a>
+       </div>
+<br>
+       <div id="wrapper-2d-s2" class="btn-class">
+           <a href="https://www.yahoo.com" target="_blank" id="yahoo">Yahoo</a>
+       </div>
+       <br>
+       <div id="wrapper-2d-s3" class="btn-class">
+           <a href="https://www.gmail.com" target="_blank" id="gmail">Gmail</a>
+       </div>
+   </div>
+   <hr>
+   <!-- 06:16:28 section-39 CSS 3D Transforms -->
+   <div>
+       <hr>
+       <h2>CSS 3D Transforms</h2>
+       <hr>
+       <div>
+           <div id="cover">
+               <div id="content"></div>
+           </div>
+       </div>
+   </div>
+   <hr>
+   <!-- 06:25:21 section-40 CSS Transitions -->
+   <div>
+       <hr>
+       <h2>CSS Transitions</h2>
+       <hr>
+       <ul>
+           <li>To make smooth transition(one state to another).</li>
+       </ul>
+       <div>
+           <div id="css-transition">
+
+           </div>
+       </div>
+   </div>
+   <hr>
+   <!-- 06:34:32 section-41 CSS Animations -->
+   <div>
+       <hr>
+       <h2>CSS Animations</h2>
+       <hr>
+       <ul>
+           <li>We define keyframe.</li>
+           <li><b>from</b> is used for <b>0%</b>.</li>
+           <li><b>to</b> is used for <b>100%</b>.</li>
+           <li>We can also use deifferent percentages as shown in below code.</li>
+       </ul>
+       <div>
+           <h4>Example 1</h4>
+           <xmp class="code-bg-color">
+    @keyframes changecolor {
+        from { background-color: red;}
+        25% { background-color: yellowgreen; width: 400px;}
+        50% { background-color: turquoise;}
+        75% { background-color: orangered; width: 200px;}
+        to { background-color: yellow;}
+    }
+    
+    #animate {
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+        margin: 50px;
+        animation-name: changecolor;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+           </xmp>
+       </div>
+       <div id="animate">
+
+       </div>
+       <div>
+           <h4>Example 2</h4>
+           <xmp class="code-bg-color">
+    @keyframes changecolor {
+        from { background-color: red;}
+        25% { background-color: yellowgreen; width: 400px;}
+        50% { background-color: turquoise;}
+        75% { background-color: orangered; width: 200px;}
+        to { background-color: yellow;}
+    }
+    
+    #animate {
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+        margin: 50px;
+        animation-name: changecolor;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+           </xmp>
+       </div>
+       <div id="animate-2">
+
+       </div>
+   </div>
+   <hr>
+   <!-- 06:52:56 section-42 Print Style in CSS -->
+   <div>
+       <hr>
+       <h2>Print Style in CSS</h2>
+       <hr>
+       <ul>
+           <li>Print style is used for making easy to print web page.</li>
+           <li>We will use <b>@media</b> for styling for <b>print</b>.</li>
+           <li>
+               <xmp class="code-bg-color">
+    @media screen {
+        #print-media>p {
+            font-size: 20px;
+        }
+    }
+    
+    @media print {
+        #print-media>p {
+            font-size: 30px;
+            color: orangered;
+        }
+    
+        #print-media>img {
+            display: none;
+        }
+    }
+               </xmp>
+           </li>
+           
+       </ul>
+       <div id="print-media">
+           <img src="/images/girl_1_crpd.jpg" alt="">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut perspiciatis hic perferendis ratione quibusdam corporis sequi, et ipsum pariatur a natus soluta animi nam enim inventore similique, nobis facere necessitatibus? Quisquam soluta similique saepe vitae earum, hic deserunt eligendi dolorem ipsum repudiandae asperiores enim vel sunt a voluptates dolores ad possimus eaque fugit maxime optio quaerat rem ducimus? Tempore, excepturi nostrum quae consectetur blanditiis laboriosam perspiciatis fugiat, dolores dolore ducimus ipsam accusantium? Aspernatur nesciunt iste veritatis maiores asperiores quaerat pariatur vitae, eaque voluptatum cum facilis totam sed voluptate quae nam eum itaque magnam natus quidem fugit. Ad iste illum ullam odio odit sit assumenda omnis aperiam debitis qui voluptates, deserunt quidem rerum excepturi enim eaque dignissimos saepe dicta veritatis quo aliquid cumque facere. Debitis expedita, nisi dolorum cum deleniti voluptas. Quaerat, enim blanditiis. Asperiores neque sed delectus enim quod tempora sapiente veritatis porro eaque eveniet dolorum nostrum temporibus ea numquam natus magnam dolorem, ducimus, officia ut. Earum officiis perspiciatis vero quaerat voluptatibus quibusdam architecto, distinctio accusamus inventore dolore facere quam neque hic illo iusto deleniti mollitia optio maiores commodi veritatis possimus. Quod sint odit magni, veritatis dignissimos voluptas illum. Fugiat itaque eveniet cum nam, omnis iure. Perspiciatis, expedita harum! Earum, possimus praesentium sit voluptate excepturi adipisci sunt nam nisi alias ipsum dolorum? Eos, dolore nisi? Libero neque aperiam quae, velit asperiores nobis minus vero a quasi. Vero quas quasi eaque quisquam? Eligendi dignissimos nostrum illum quasi perferendis cumque doloremque, placeat, animi soluta reprehenderit sunt eos, suscipit neque nam dolorum ut laborum nihil maxime. Voluptas nesciunt ut a, repellendus accusamus commodi unde. Incidunt reiciendis atque repellat odio consequatur ipsa dicta laudantium accusamus obcaecati labore blanditiis dignissimos mollitia consequuntur necessitatibus vitae quia officiis fuga esse sed suscipit, est sunt dolor corporis itaque? Sint ut natus repudiandae magni laborum temporibus voluptatibus deserunt omnis nemo quibusdam voluptatum ratione voluptates, rerum alias sit expedita laudantium doloremque. Ipsam officia quam consequatur dolore asperiores maiores tempora eos fugit. Impedit aliquid similique laborum ipsum! Dignissimos adipisci, magni esse molestias alias neque pariatur assumenda dolorum iusto iste quibusdam qui. Dolorem harum qui animi, aliquid vel vero eligendi quisquam amet accusamus non quibusdam tempora sint impedit fugit laborum soluta dolore error est distinctio optio cumque doloremque. Magni, nisi corporis recusandae asperiores ipsa, voluptate adipisci blanditiis aliquid eius reprehenderit aspernatur eos accusantium, quibusdam voluptates cum est at sit temporibus inventore qui aperiam culpa quisquam nam ipsum! Ratione quisquam alias amet.</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 06:57:29 section-43 Responsive Web Design -->
+   <div>
+       <hr>
+       <h2>Responsive Web Design</h2>
+       <hr>
+   </div>
+   <hr>
+   <!-- 07:06:26 section-44 Viewport meta tag -->
+   <div>
+       <hr>
+       <h2>Viewport meta tag</h2>
+       <hr>
+       <ul>
+           <li>If you do not use any css framework then you have to include some extra lines of code in head tag.</li>
+           <li>You need three thing to make responsive design i.e
+               <ul>
+                   <li>Viewport meta tag
+                       <ul>
+                           <li>
+                               <xmp class="code-bg-color"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            </xmp>
+                            </li>
+                       </ul>
+                   </li>
+                   <li>Media query</li>
+                   <li>Make Images and video responsive
+                       <ul>
+                           <li>
+<xmp class="code-bg-color">
+    img {
+        width: 100%;
+        height: auto;
+    }
+    video {
+        width: 100%;
+        height: auto;
+    }
+</xmp>
+                           </li>
+                       </ul>
+                   </li>
+               </ul>
+           </li>
+       </ul>
+   </div>
+   <hr>
+   <!-- 07:12:25 section-45 Media Queries -->
+   <div>
+       <hr>
+       <h2>Media Queries</h2>
+       <hr>
+       <ul>
+           <li>This was introduced in css 3</li>
+           <li>If we write <b>max-width: 768px</b> it means that devices <b>greater than 768px</b> will not render the changes. </li>
+           <li>max-width: Style will be applied <b>less than</b> given <b>400px</b></li></li>
+           <li>min-width: Style will be applied <b>above</b> given <b>400px</b></li>
+           <li>
+               <xmp class="code-bg-color">
+    @media screen and (max-width: 768px) {
+        #res-menu-header {
+            width: 50%;
+        }
+    
+        #res-logo-header{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        #res-menu-header {
+            width: 100%;
+        }
+    
+        #res-logo-header{
+            width: 100%;
+        }
+    }
+               </xmp>
+           </li>
+       </ul>
+       <div id="parent-header">
+           <div id="res-menu-header">
+               <h1 class="increase-size">Nav Menu</h1>
+           </div>
+           <div id="res-logo-header">
+               <h1 class="increase-size">Logo</h1>
+           </div>
+       </div>
+   </div>
+   <hr>
+   <!-- 07:28:01 section-46 CSS Advance Selector -->
+   <div>
+       <hr>
+       <h2>CSS Advance Selector</h2>
+       <hr>
+       <ul>
+           <li>Attribute Selector
+               <ul>
+                   <li>
+                       Whichever element have this <b>attribute and value</b> will be selected.
+<xmp class="code-bg-color">
+    a[href="https://www.example.com"] {
+    color: red;
+    }
+</xmp>
+                   </li>
+               </ul>
+           </li>
+           <li>Universal Selector
+               <ul>
+                   <li>
+                       This is very usefull in debugging. This will apply on all element.
+<xmp class="code-bg-color">
+    * {
+        color: red;
+    }
+</xmp>
+                   </li>
+               </ul>
+           </li>
+           <li>Combinator Selector
+               <ul>
+                   <li>
+                       Descendant Combinatory (child at any stage).
+<xmp class="code-bg-color">
+    .red-p span {
+        color: green;
+    }
+</xmp>
+                   </li>
+                   <li>
+                       Child Combinatory (Direct Child)
+<xmp class="code-bg-color">
+    .red-p>span {
+        color: blueviolet;
+    }
+</xmp>
+                   </li>
+                   <li>
+                       Adjacent Combinatory (Right after sibling)
+<xmp class="code-bg-color">
+    .red-p + H1 {
+        color: yellow;
+    }
+</xmp>
+                   </li>
+                   <li>
+                       General sibling Combinatory (all sibling)
+<xmp class="code-bg-color">
+    .red-p ~ H1 {
+        color: orangered;
+    }
+</xmp>
+                   </li>
+                   <li>
+                       General sibling Combinatory (right after sibling)
+<xmp class="code-bg-color">
+    .red-p , H1 {
+        color: grey;
+    }
+</xmp>
+                   </li>
+               </ul>
+           </li>
+       </ul>
+       <!-- Example -->
+       <div id="advance-selector">
+            <h1>Advance Selector Example</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla excepturi repudiandae repellat, repellendus illum in animi rerum quidem vel? Doloribus ipsum deleniti corrupti repellendus quas ea voluptatibus provident recusandae necessitatibus deserunt tempore natus modi a id hic molestiae dicta veritatis officia, animi magni fugiat qui, soluta consequatur! Dolorum esse fugiat nobis? Ut natus ullam cum, error quasi quod sapiente libero facilis, iure ratione est ab quia atque? Laborum asperiores praesentium minus iste recusandae temporibus aperiam amet a perferendis doloribus? Explicabo pariatur cumque quisquam animi, eum nostrum velit eos officiis. Dignissimos, tempore fugit nam culpa exercitationem nesciunt distinctio. Illum debitis necessitatibus provident. Fugiat nulla blanditiis veniam rerum vitae aperiam laboriosam, est placeat vel, ipsum, molestiae eligendi eius error? Repudiandae repellendus at amet temporibus modi totam impedit expedita reiciendis fugiat perferendis, vero delectus soluta illum ex nostrum obcaecati doloremque ad in placeat id, eius quia aliquam. Officiis assumenda nobis vitae alias fugit a natus doloribus hic voluptatem asperiores et, recusandae dolore. Vel earum nam laboriosam, magnam quos quod veritatis architecto accusantium inventore harum dolorum eos voluptatum quasi laborum vitae tempora quae labore? Id magni ut animi aliquam cupiditate exercitationem dolores cum quia odio vel commodi ullam necessitatibus voluptas, eveniet, delectus voluptates ea!</p>
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+                <li>List 4</li>
+                <li>List 5 <a href="https://www.google.com" target="_blank">Google</a></li>
+                <li>List 6</li>
+                <li>List 7 <a href="https://www-facebook.com">Facebook</a></li>
+                <li>List 8</li>
+            </ul>
+            <a href="#" id="adv-2">Outside Link</a> <br>
+            I am direct text inside div.    
+       </div>
+   </div>
+   <hr>
+   <!-- 07:46:36 section-47 CSS Specificity -->
+   <div>
+       <hr>
+       <h2>CSS Specificity</h2>
+       <hr>
+       <div>
+           <img src="/images/doc/specificity-1.png" alt="">
+           <img src="/images/doc/specificity-2.png" alt="">
+           <img src="/images/doc/specificity-3.png" alt="">
+           <img src="/images/doc/specificity-4.png" alt="">
+           <img src="/images/doc/specificity-5.png" alt="">
+           <img src="/images/doc/specificity-6.png" alt="">
+           <img src="/images/doc/specificity-7.png" alt="">
+       </div>
+   </div>
+   <hr>
+   <!-- 07:52:41 section-48 CSS Multiple Columns -->
+   <div>
+       <hr>
+       <h2>CSS Multiple Columns</h2>
+       <hr>
+       <ul>
+           <li>If you want that your text should come in columns then you can use this.</li>
+       </ul>
+       <div id="multiple-columns">
+           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa eos deserunt ducimus eveniet! Ullam numquam dignissimos maiores obcaecati vero.</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad, est repudiandae excepturi eveniet perferendis illo laborum odit esse impedit accusantium voluptate obcaecati dignissimos quisquam quibusdam ipsum error cum. Mollitia dolorum commodi officia doloremque obcaecati voluptas earum, vero ab minima natus, blanditiis, deleniti maiores nisi tempora necessitatibus ullam voluptates modi architecto recusandae aperiam dignissimos dicta et? Vel sequi quaerat eligendi autem harum quidem repellendus sapiente, sunt accusantium rem, quod dolor animi cumque laudantium molestias recusandae suscipit quasi voluptatibus. Saepe suscipit est deserunt molestias culpa et optio consectetur deleniti cumque eveniet, perferendis illo maiores non minus temporibus ipsa praesentium velit consequatur eius. Accusantium quaerat, assumenda necessitatibus ipsa illum nihil excepturi ex placeat aut commodi eius officia. At dolore laborum earum temporibus deleniti fugit quo nobis consequatur magni tempore velit debitis, maiores sunt ad iure a nesciunt placeat aperiam et id ratione! Unde, fuga sint suscipit error facilis consequatur voluptatibus fugit sed dolore, optio expedita eum! Sunt corporis nobis quibusdam doloribus voluptates itaque facilis, praesentium in iste, ad vero dolores dolore exercitationem facere voluptate sapiente architecto? Veritatis dolores nesciunt doloremque, facere voluptatem officiis tempore, delectus fugit beatae optio suscipit laborum recusandae inventore corporis laudantium vitae maiores sunt qui! Iusto dolorem harum cumque.</p>
+       </div>
+   </div>
+   <hr>
+   <!-- 07:58:28 section-49 CSS Flexbox -->
+   <div>
+       <hr>
+       <h2>CSS Flexbox</h2>
+       <hr>
+       <ul>
+           <li>Responsive website without using <b>float</b> and <b>position</b></li>
+           <li><b>flex-direction: row-reverse</b>: This will shift content to right direction in reverse order.</li>
+           <li><b>flex-direction: column-reverse</b> : This will arrange item in vertical direction in reverse order.</li>
+           <li><b>flex-wrap: nowrap;</b>: This will try to fit all child into parent by adjusting their width.It will ignore <b>width</b> given to the child.</li>
+           <li><b>flex-wrap: wrap;</b>: This will consider the <b>width</b> given to the child. If any extra child will be there then that will be shifted into next line.</li>
+           <li><b>flex-flow: row wrap-reverse</b>: This is shortcut for giving <b>direction</b> and <b>wrap/nowrap</b>.</li>
+           <hr>
+           <h3 style="color: tomato;">Difficult to deal with normal css</h3>
+           <li><b>justify-content: flex-start</b>: It works horizontally. This is by default.</li>
+           <li><b>justify-content: flex-end</b>: This will shift all child to the right side.</li>
+           <li><b>justify-content: center</b>: This will shift all child to the center.</li>
+           <li><b>justify-content: space-around</b>: This will give equal space around all child elements.</li>
+           <li><b>justify-content: space-between</b>: This will give equal space only between child elements. It will not take any space from it's right or left.</li>
+           <li><b>align-items: stretch/center/flex-start/flex-end</b>: It works vertically. It is very usefull when you have given excess height to parent then all child height will streach by default. So for controling that you have to use this property.</li>
+           <li>You can also change order of child element. Just select all that element and give <b>order: 4</b> like this.</li>
+           <li><b>flex-grow: ratio</b>: This will allow the child to occupy extra spaces according to ratio.</li>
+           <li><b>flex-shrink: ratio</b>: This will allow you to shrink specific elemnt if some extra element are added to the group.</li>
+           <li><b>flex-basis: 300px</b>: It tells that what is the initial width.</li>
+           <li><b>align-self: center/flex-start/flex-end</b>: This is styling individual child element.</li>
+       </ul>
+       <div class="flex-container">
+           <div class="flex-child">One</div>
+           <div class="flex-child">Two</div>
+           <div class="flex-child">Three</div>
+           <!-- <div class="flex-child">Four</div>
+           <div class="flex-child">Five</div>
+           <div class="flex-child">Six</div>
+           <div class="flex-child">Seven</div>
+           <div class="flex-child">Eight</div> -->
+       </div>
+   </div>
+   <hr>
+   <!-- 08:28:14 section-50 CSS Grid -->
+   <div>
+       <hr>
+       <h2>CSS Grid</h2>
+       <hr>
+       <ul>
+           <li>When we apply <b>display: grid</b>:  Then nothing will happen, it just divide things in row.</li>
+           <li><b>display: inline-grid</b>: This will take space according to the content.</li>
+           <li>Create column in grid with custom values by using <b>grid-template-columns: auto 50% 100px;</b></li>
+           <li>Increase height of rows <b>grid-template-rows: 100px 200px auto;</b></li>
+           <li><b>grid-row-gap: 20px;</b></li>
+           <li><b>grid-column-gap: 30px;</b></li>
+           <li>To move grid <b>justify-content: end;</b></li>
+           <hr>
+           <h3>Grid items properties</h3>
+           <li>To merge columns
+               <ul>
+                   <li>grid-column-start: 1;</li>
+                   <li>grid-column-end: 3;</li>
+                   <li>grid-column: 2/4;</li>
+               </ul>
+           </li>
+           <li>To merge rows
+               <ul>
+                   <li>grid-rows-start: 1;</li>
+                   <li>grid-rows-end: 3;</li>
+                   <li>grid-row: 2/4;</li>
+               </ul>
+           </li>
+           <li>To merge rows and column both at once
+               <ul>
+                   <li>grid-rows-start: 1;</li>
+                   <li>grid-rows-end: 3;</li>
+                   <li>grid-row: 2/4;</li>
+               </ul>
+           </li>
+       </ul>
+       <div class="grid-container">
+            <div class="grid-items" id="grid-1">1</div>
+            <div class="grid-items" id="grid-2">2</div>
+            <div class="grid-items" id="grid-3">3</div>
+            <div class="grid-items" id="grid-4">4</div>
+            <div class="grid-items" id="grid-5">5</div>
+            <div class="grid-items" id="grid-6">6</div>
+            <div class="grid-items" id="grid-7">7</div>
+            <div class="grid-items" id="grid-8">8</div>
+            <div class="grid-items" id="grid-9">9</div>
+        </div>
+        <h2>Website layout by using grid</h2>
+        <div>
+            <div class="grid-container-2">
+                <div class="grid-item-2" id="grid-11">11</div>
+                <div class="grid-item-2" id="grid-12">12</div>
+                <div class="grid-item-2" id="grid-13">13</div>
+                <div class="grid-item-2" id="grid-14">14</div>
+                <div class="grid-item-2" id="grid-15">15</div>
+            </div>
+        </div>
+        
+   </div>
+   <hr>
+   <!-- 09:03:18 section-51 CSS - Validations -->
+   <div>
+       <hr>
+       <h2>CSS - Validations</h2>
+       <hr>
+       <ul>
+           <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS-Validator</a></li>
+       </ul> 
+   </div>
+   <hr>
+   
+</body>
+</html>
